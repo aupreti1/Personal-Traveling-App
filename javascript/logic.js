@@ -1,5 +1,16 @@
 $(document).ready(function () {
 
+    var config = {
+        apiKey: "AIzaSyCEEkKqWFKy24DDMpplraZp_XDdRW6kwZI",
+        authDomain: "personality-vacation-quiz.firebaseapp.com",
+        databaseURL: "https://personality-vacation-quiz.firebaseio.com",
+        projectId: "personality-vacation-quiz",
+        storageBucket: "personality-vacation-quiz.appspot.com",
+        messagingSenderId: "212502506246"
+      };
+      firebase.initializeApp(config);
+
+
     var Questions = [{
         question: "How would you prefer to spend a free afternoon?",
         answerList: ["Alone in your bed with a good bool/movie", 
