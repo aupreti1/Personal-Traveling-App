@@ -186,7 +186,7 @@ $(document).ready(function () {
 
     var currentQuestion = 0;
 
-    var unanswered = 0;
+    
     var answered = 0;
     var userSelect = 0;
 
