@@ -171,7 +171,70 @@ $(document).ready(function () {
         "./assets/images/audi.jpg", 
         "./assets/images/rangerover.jpg", 
         "./assets/images/foodtruck.jpg"]
+    }, {
+        question: "How would you rather listen to your music?",
+        answerList: ["Headphones", "Blasting in the Car", 
+        "Music Festival", "Vinyl", "Party Inside a Club", 
+        "Live Band at a Local Joint", "Bluetooth Speaker"]
+    }, {
+        question: "You won the lottery! What is the first thing you do?",
+        answerList: ["Move off the grid", "Travel the World", 
+        "Buy an Airstream and Travel", "Buy a Historical Castle", 
+        "Throw a Wild Party", "Quit Your Job and Do as You Please", 
+        "Treat Yourelf to an Expensive Meal"]
     }]
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58608d2596af06999b8829030df33064ca926d4e
+    var currentQuestion;
+
+    var answered;
+    var userSelect;
+
+    function startGame() {
+        $('#answered').empty();
+        $('#userSelect').empty();
+     
+        currentQuestion = 0;
+         
+        newQuestion()
+    }
+
+   function newQuestion() {
+       answered = true;
+<<<<<<< HEAD
+=======
+    var currentQuestion = 0;
+
+    
+    var answered = 0;
+    var userSelect = 0;
+
+   function promtQuestion() {
+>>>>>>> c1d875b9e88b3e4c7dc419133519cad88a8a5871
+=======
+
+>>>>>>> 58608d2596af06999b8829030df33064ca926d4e
+       for (var i = 0; i < Questions.length; i++) {
+           var choices = $('<div>');
+           choices.text(Questions[currentQuestion].answerList[i]);
+           choices.attr({'data-index': i });
+           choices.addClass('thisChoice');
+           $('.answerList').append(choices);
+       }
+
+       $('.thisChoice').on('click', function () {
+           userSelect = $(this).data('index')
+       });
+   }
+
+   $('#info-button').on('click', function () {
+    $(this).hide();
+    startGame();
+    });
 
 
 
