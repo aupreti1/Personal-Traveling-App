@@ -184,6 +184,7 @@ $(document).ready(function () {
         "Treat Yourelf to an Expensive Meal"]
     }]
 
+<<<<<<< HEAD
     var currentQuestion;
 
     var answered;
@@ -200,6 +201,15 @@ $(document).ready(function () {
 
    function newQuestion() {
        answered = true;
+=======
+    var currentQuestion = 0;
+
+    
+    var answered = 0;
+    var userSelect = 0;
+
+   function promtQuestion() {
+>>>>>>> c1d875b9e88b3e4c7dc419133519cad88a8a5871
        for (var i = 0; i < Questions.length; i++) {
            var choices = $('<div>');
            choices.text(Questions[currentQuestion].answerList[i]);
