@@ -185,6 +185,10 @@ $(document).ready(function () {
     }]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 58608d2596af06999b8829030df33064ca926d4e
     var currentQuestion;
 
     var answered;
@@ -201,6 +205,7 @@ $(document).ready(function () {
 
    function newQuestion() {
        answered = true;
+<<<<<<< HEAD
 =======
     var currentQuestion = 0;
 
@@ -210,6 +215,9 @@ $(document).ready(function () {
 
    function promtQuestion() {
 >>>>>>> c1d875b9e88b3e4c7dc419133519cad88a8a5871
+=======
+
+>>>>>>> 58608d2596af06999b8829030df33064ca926d4e
        for (var i = 0; i < Questions.length; i++) {
            var choices = $('<div>');
            choices.text(Questions[currentQuestion].answerList[i]);
