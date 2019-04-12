@@ -8,9 +8,37 @@ $(document).ready(function () {
         storageBucket: "personality-vacation-quiz.appspot.com",
         messagingSenderId: "212502506246"
       };
+
       firebase.initializeApp(config);
+      var database = firebase.database();
+   
+      
 
+      $("#info-button").on("click", function() {
+        event.preventDefault();
+        
+        var firstName = $("#first_name").val().trim();
+        var lastName = $("#last_name").val().trim();
+        var email = $("#email").val().trim();
+        
+        var newUser = {
+            FirstName: firstName,
+            LastName: lastName,
+            Email: email,
+        }
 
+        database.ref().push(newUser);
+
+        console.log(newUser.firstName);
+        console.log(newUser.lastName);
+        console.log(newUser.email);
+
+        event.hide("#info-box");
+
+    });
+   
+    
+    
     var Questions = [{
         question: "How would you prefer to spend a free afternoon?",
         answerList: ["Alone in your bed with a good bool/movie", 
@@ -229,33 +257,8 @@ $(document).ready(function () {
    $('#info-button').on('click', function () {
     $(this).hide();
     startGame();
+
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+});
