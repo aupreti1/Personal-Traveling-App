@@ -171,7 +171,38 @@ $(document).ready(function () {
         "./assets/images/audi.jpg", 
         "./assets/images/rangerover.jpg", 
         "./assets/images/foodtruck.jpg"]
+    }, {
+        question: "How would you rather listen to your music?",
+        answerList: ["Headphones", "Blasting in the Car", 
+        "Music Festival", "Vinyl", "Party Inside a Club", 
+        "Live Band at a Local Joint", "Bluetooth Speaker"]
+    }, {
+        question: "You won the lottery! What is the first thing you do?",
+        answerList: ["Move off the grid", "Travel the World", 
+        "Buy an Airstream and Travel", "Buy a Historical Castle", 
+        "Throw a Wild Party", "Quit Your Job and Do as You Please", 
+        "Treat Yourelf to an Expensive Meal"]
     }]
+
+    var currentQuestion = 0;
+
+    var unanswered = 0;
+    var answered = 0;
+    var userSelect = 0;
+
+   function promtQuestion() {
+       for (var i = 0; i < Questions.length; i++) {
+           var choices = $('<div>');
+           choices.text(Questions[currentQuestion].answerList[i]);
+           choices.attr({'data-index': i });
+           choices.addClass('thisChoice');
+           $('.answerList').append(choices);
+       }
+
+       $('.thisChoice').on('click', function () {
+           userSelect = $(this).data('index')
+       });
+   }
 
 
 
