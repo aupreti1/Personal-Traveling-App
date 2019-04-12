@@ -8,19 +8,49 @@
     <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Google Fonts link-->
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
   <header></header>
   <body background="assets/images/collage.jpg">
     <div class="container">
         <div class="row">
             <div class="col s12">
-                <div class="card medium" id="card"></div>
+                <div class="card medium" id="card">
+                    <h1>Are you not sure where to go on your next Vacation?</h1>
+                    <h6>To get started please input your Name and E-mail Address:</h6>
+                    <div class="row">
+                            <form class="col s12">
+                              <div class="row" id=info>
+                                <div class="input-field col s6">
+                                  <input id="first_name" type="text" class="validate">
+                                  <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                  <input id="last_name" type="text" class="validate">
+                                  <label for="last_name">Last Name</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                                <button class="btn waves-effect waves-light" id="info-button" type="submit" name="action">Submit
+                                 <i class="material-icons right">send</i>
+                                </button>
+                              </div>
+                            </form>
+                </div>
+                
             </div>
         </div>
                             
-    </div>           
+    </div>      
+    </div>     
     <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
-  <footer></footer>
+    <script type="text/javascript" src="javascript/materialize.min.js"></script>
+    <script type="text/javascript" src="javascript/materialize.js"></script>
+    <script type="text/javasctipt" src="javascript/logic.js"></script>
+
+</body>
+<footer></footer>  
 </html>
