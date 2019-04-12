@@ -11,17 +11,28 @@
     <!--Google Fonts link-->
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
-  <header></header>
+  <header>
+        <h3>Trying to figure out where to go on your next Vacation?</h3>
+  </header>
   <body background="assets/images/collage.jpg">
     <div class="container">
         <div class="row">
             <div class="col s12">
                 <div class="card medium" id="card">
-                    <h1>Are you not sure where to go on your next Vacation?</h1>
-                    <h6>To get started please input your Name and E-mail Address:</h6>
-                    <div class="row">
+                    <div id="question"><h3> </h3></div>
+                        <div class="row">
+                            <div class="col s10 ans_options">
+                                <div id="answerList"></div>            
+                            </div>
+                        </div>
+                    <div class="col s10 result_area">
+                        <div id="results"></div>
+                        <div id="facts"></div>
+                    </div>
+                    <div class="row" id="info-box">
                             <form class="col s12">
                               <div class="row" id=info>
+                                <h6>Please input your Name and E-mail Address to get started:</h6>
                                 <div class="input-field col s6">
                                   <input id="first_name" type="text" class="validate">
                                   <label for="first_name">First Name</label>
@@ -38,7 +49,8 @@
                                  <i class="material-icons right">send</i>
                                 </button>
                               </div>
-                            </form>
+                        </form>
+                        </div>
                 </div>
                 
             </div>
@@ -50,7 +62,6 @@
     <script type="text/javascript" src="javascript/materialize.min.js"></script>
     <script type="text/javascript" src="javascript/materialize.js"></script>
     <script type="text/javasctipt" src="javascript/logic.js"></script>
-
 </body>
 <footer></footer>  
 </html>

@@ -184,6 +184,7 @@ $(document).ready(function () {
         "Treat Yourelf to an Expensive Meal"]
     }]
 
+
     var currentQuestion;
 
     var answered;
@@ -200,6 +201,7 @@ $(document).ready(function () {
 
    function newQuestion() {
        answered = true;
+
        for (var i = 0; i < Questions.length; i++) {
            var choices = $('<div>');
            choices.text(Questions[currentQuestion].answerList[i]);
