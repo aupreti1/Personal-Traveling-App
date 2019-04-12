@@ -195,13 +195,24 @@ $(document).ready(function () {
         "Treat Yourelf to an Expensive Meal"]
     }]
 
-    var currentQuestion = 0;
 
-    
-    var answered = 0;
-    var userSelect = 0;
+    var currentQuestion;
 
-   function promtQuestion() {
+    var answered;
+    var userSelect;
+
+    function startGame() {
+        $('#answered').empty();
+        $('#userSelect').empty();
+     
+        currentQuestion = 0;
+         
+        newQuestion()
+    }
+
+   function newQuestion() {
+       answered = true;
+
        for (var i = 0; i < Questions.length; i++) {
            var choices = $('<div>');
            choices.text(Questions[currentQuestion].answerList[i]);
@@ -214,6 +225,11 @@ $(document).ready(function () {
            userSelect = $(this).data('index')
        });
    }
+
+   $('#info-button').on('click', function () {
+    $(this).hide();
+    startGame();
+    });
 
 
 
