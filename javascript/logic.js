@@ -1,8 +1,49 @@
 $(document).ready(function () {
+    
+    
+    var config = {
+        apiKey: "AIzaSyCEEkKqWFKy24DDMpplraZp_XDdRW6kwZI",
+        authDomain: "personality-vacation-quiz.firebaseapp.com",
+        databaseURL: "https://personality-vacation-quiz.firebaseio.com",
+        projectId: "personality-vacation-quiz",
+        storageBucket: "personality-vacation-quiz.appspot.com",
+        messagingSenderId: "212502506246"
+      };
 
+      firebase.initializeApp(config);
+      var database = firebase.database();
+        
+      console.log('helloworld');
+
+      $('#info-button').on('click', function() {
+        event.preventDefault();
+        
+        var firstName = $('#first_name').val().trim();
+        var lastName = $('#last_name').val().trim();
+        var email = $('#email').val().trim();
+        
+        var newUser = {
+            FirstName: firstName,
+            LastName: lastName,
+            Email: email,
+        }
+
+        database.ref().push(newUser);
+
+        console.log(newUser.firstName);
+        console.log(newUser.lastName);
+        console.log(newUser.email);
+
+        $('#info-box').hide();
+      
+
+    });
+   
+    
+    
     var Questions = [{
         question: "How would you prefer to spend a free afternoon?",
-        answerList: ["Alone in your bed with a good bool/movie", 
+        answerList: ["Alone in your bed with a good book/movie", 
         "Going out to try a new restaurant", 
         "Laying out under the stars enjoying the night", 
         "Re-watching your favorite historical movie or show", 
@@ -184,83 +225,51 @@ $(document).ready(function () {
         "Treat Yourelf to an Expensive Meal"]
     }]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 58608d2596af06999b8829030df33064ca926d4e
     var currentQuestion;
 
-    var answered;
-    var userSelect;
+    var answered = 0;
+    var userSelect = 0;
 
     function startGame() {
         $('#answered').empty();
         $('#userSelect').empty();
-     
+        
         currentQuestion = 0;
-         
-        newQuestion()
+        Answered = false;
+
+        newQuestion();
     }
 
    function newQuestion() {
-       answered = true;
-<<<<<<< HEAD
-=======
-    var currentQuestion = 0;
-
-    
-    var answered = 0;
-    var userSelect = 0;
-
-   function promtQuestion() {
->>>>>>> c1d875b9e88b3e4c7dc419133519cad88a8a5871
-=======
-
->>>>>>> 58608d2596af06999b8829030df33064ca926d4e
+       Answered = false;
+       $('#question').html('Question #' + (currentQuestion + 1) + '/' + Questions.length);
+        $('#question').html('<h3>' + Questions[currentQuestion].question + '</h3>');
        for (var i = 0; i < Questions.length; i++) {
            var choices = $('<div>');
            choices.text(Questions[currentQuestion].answerList[i]);
            choices.attr({'data-index': i });
            choices.addClass('thisChoice');
-           $('.answerList').append(choices);
+           $('#answerList').append(choices);
        }
 
        $('.thisChoice').on('click', function () {
            userSelect = $(this).data('index')
+           $('.thisChoice').empty();
+           $('#question').empty();
+           currentQuestion++;
+           newQuestion(); 
+           Answered = true;
+
+         
        });
+
+       
    }
 
    $('#info-button').on('click', function () {
     $(this).hide();
     startGame();
+
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+    });
