@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
 
     var config = {
         apiKey: "AIzaSyCEEkKqWFKy24DDMpplraZp_XDdRW6kwZI",
@@ -31,213 +32,214 @@ $(document).ready(function() {
 
         $('#info-box').hide();
 
+
     });
+
+
 
     var Questions = [{
         question: "How would you prefer to spend a free afternoon?",
-        answerList: ["Alone in your bed with a good book/movie",
+        text: [
+            "Alone in your bed with a good book/movie",
             "Going out to try a new restaurant",
             "Laying out under the stars enjoying the night",
             "Re-watching your favorite historical movie or show",
             "Going out ot your favorite club or bar",
             "Hanging out with a few friends at home",
-            "In the kitchen creating new concoctions of snacks"
-        ]
+            "In the kitchen creating new concoctions of snacks"]
+
     }, {
         question: "What would you rather read?",
-        answerList: ["./assets/images/ripper.jpg",
+        img: [
+            "./assets/images/ripper.jpg",
             "./assets/images/travelingpants.jpg",
             "./assets/images/intothewild.jpg",
             "./assets/images/boleyn.jpg",
             "./assets/images/cosmo.jpg",
             "./assets/images/harrypotter.jpg",
-            "./assets/images/eatpraylove.jpg"
-        ]
+            "./assets/images/eatpraylove.jpg"]
+
     }, {
         question: "What movie would you prefer to watch?",
-        answerList: ["./assets/images/wallflower.jpg",
+        img: ["./assets/images/wallflower.jpg",
             "./assets/images/midnight.jpg",
             "./assets/images/grizzlyman.jpg",
             "./asseets/images/pride.jpg",
             "./assets/images/hangover.jpg",
             "./assets/images/howtolose.jpg",
-            "./assets/images/julieandjulia.jpg"
-        ]
+            "./assets/images/julieandjulia.jpg"]
+
     }, {
         question: "What shoes would you rather wear any day/all day?",
-        answerList: ["./assets/images/bedslippers.jpg",
+        img: ["./assets/images/bedslippers.jpg",
             "./assets/images/chacos.jpg",
             "./assets/images/boots.jpg",
             "./assets/images/convers.jpg",
             "./assets/images/heels.jpg",
             ".assets/images/slides.jpg",
-            "./assets/images/runningshoes.jpg"
-        ]
+            "./assets/images/runningshoes.jpg"]
+
     }, {
         question: "What is your favorite color?",
-        answerList: ["./assets/images/black.jpg",
+        img: ["./assets/images/black.jpg",
             "./assets/images/blue.jpg",
             "./assets/images/green.jpg",
             "./assets/images/purple.jpg",
             "./assets/images/orange.jpg",
             "./assets/images/pink.jpg",
-            "./assets/images/red.jpg"
-        ]
+            "./assets/images/red.jpg"]
+
     }, {
         question: "What show would you prefer to watch?",
-        answerList: ["./assets/images/penny.jpg",
+        img: ["./assets/images/penny.jpg",
             "./assets/images/darktourist.jpg",
             "./assets/images/blueplanet.jpg",
             "./assets/images/reign.jpg",
             "./assets/images/jerseyshore.jpg",
             "./assets/images/parksandrec.jpg",
-            "./assets/images/cupcake.jpg"
-        ]
+            "./assets/images/cupcake.jpg"]
+
     }, {
         question: "What would be your dream career?",
-        answerList: ["Medical Lab Technician",
+        text: ["Medical Lab Technician",
             "Flight Attendant",
             "Marine Biologist",
             "Archeologist",
             "Event Planner",
             "Doggie Daycare Owner",
-            "Recipe Tester"
-        ]
+            "Recipe Tester"]
+
     }, {
         question: "What music genre do you prefer?",
-        answerList: ["Rock and Roll",
+        text: ["Rock and Roll",
             "Pop Music", "Folk Music",
             "Country Music", "House Music",
-            "Classical Music", "Punk Rock"
-        ]
+            "Classical Music", "Punk Rock"]
+
     }, {
         question: "What could you NOT live without?",
-        answerList: ["Netflix/Hulu",
+        text: ["Netflix/Hulu",
             "Cell Phone", "Favorite Sneakers",
             "Favorite Book", "Booze", "Pet",
-            "Favorite Food"
-        ]
+            "Favorite Food"]
+
     }, {
         question: "What is your preferred way of communication?",
-        answerList: ["None", "FaceTime",
+        text: ["None", "FaceTime",
             "Face to Face", "Letters",
-            "Snapchat", "Text", "Instagram"
-        ]
+            "Snapchat", "Text", "Instagram"]
+
     }, {
         question: "Which of these do you find most satisfying?",
-        answerList: ["Spending time on your own",
+        text: ["Spending time on your own",
             "Seeing new places", "Hiking",
             "Reading about different times and places",
             "Hitting up alocal club or pub",
             "Laying on a beach or in a hammock",
-            "Discovering new places to eat"
-        ]
+            "Discovering new places to eat"]
+
     }, {
         question: "Which of these superpowers sound more appealing?",
-        answerList: ["./assets/images/weather.jpg",
+        img: ["./assets/images/weather.jpg",
             "./assets/images/superman.jpg",
             "./assets/images/fire.jpg",
             "./assets/images/speed.jpg",
             "./assets/images/mindreading.jpg",
             "./assets/images/telekinesis.jpg",
-            "./assets/images/plantbasedpowers"
-        ]
+            "./assets/images/plantbasedpowers"]
+
     }, {
         question: "Which of these could be your spirit animals?",
-        answerList: ["./assets/images/cat.jpg",
+        img: ["./assets/images/cat.jpg",
             "./assets/images/owl.jpg",
             ".assets/images/horse",
             "./assets/images/dino.jpg",
             "./assets/images/monkey.jpg",
             "./assets/images/dog.jpg",
-            "./assets/images/bear.jpg"
-        ]
+            "./assets/images/bear.jpg"]
+
     }, {
         question: "Which of these hobbies interest you the most?",
-        answerList: ["Coloring Books",
+        text: ["Coloring Books",
             "Learning a language", "Camping",
             "Reading", "Dancing", "Yoga",
-            "Cooking"
-        ]
+            "Cooking"]
+
     }, {
         question: "Which of these qualities is most appealing in a partner/friend",
-        answerList: ["Loyalty", "Adventurous",
+        text: ["Loyalty", "Adventurous",
             "Patient", "Intelligent", "Fun",
-            "Laid Back", "Open Minded"
-        ]
+            "Laid Back", "Open Minded"]
+
     }, {
         question: "Which of these celebs would you want to meet?",
-        answerList: ["./assets/images/johnnydepp.jpg",
+        img: ["./assets/images/johnnydepp.jpg",
             "./assets/images/angelinajolie.jpg",
             "./assets/images/zacefron.jpg",
             "./assets/images/georgeclooney",
             "./assets/images/leonardodicaprio.jpg",
             "./assets/images/sandrabullock.jpg",
-            "./assets/images/chrissyteigen.jpg"
-        ]
+            "./assets/images/chrissyteigen.jpg"]
+
     }, {
         question: "What is your ideal date?",
-        answerList: ["No date for me! I'd rather hang with my fur child",
+        text: ["No date for me! I'd rather hang with my fur child",
             "Going for a tour around the city",
             "Hiking a mountain",
             "Going to a museum or art gallery",
             "Going to a night club",
             "Dinner and a movie",
-            "Going to a high-end restaurant with a 7-course meal"
-        ]
+            "Going to a high-end restaurant with a 7-course meal"]
     }, {
         question: "What picture most constitutes as your dream house?",
-        answerList: ["./assets/images/secludedhouse.jpg",
+        img: ["./assets/images/secludedhouse.jpg",
             "./assets/images/touristichouse.jpg",
             "./assets/images/outdoorshouse.jpg",
             "./assets/images/historicalhouse.jpg",
             "./assets/images/partyhouse.jpg",
             "./assets/images/relaxinghouse.jpg",
-            "./assets/images/foodiehouse.jpg"
-        ]
+            "./assets/images/foodiehouse.jpg"]
+
     }, {
         question: "Which would you rather have?",
-        answerList: ["./assets/images/benandjerrys.jpg",
+        img: ["./assets/images/benandjerrys.jpg",
             "./assets/images/macaroons.jpg",
             "./assets/images/foodinapot.jpg",
             "./assets/images/wineandcheese.jpg",
             "./assets/images/drinks.jpg",
             "./assets/images/hamburgerandfries.jpg",
-            "./assets/images/fancyfoods"
-        ]
+            "./assets/images/fancyfoods"]
+
     }, {
         question: "Which of these annoys you the most?",
-        answerList: ["People who are mean to others",
+        text: ["People who are mean to others",
             "Being bored with nothing to do",
             "People who constantly complain",
             "Unnecessary drama",
             "Phone battery's dead and you don't have a charger",
             "Feeling stressed and overwhelmed",
-            "Messy House"
-        ]
+            "Messy House"]
+
     }, {
         question: "What vehicle would you rather drive?",
-        answerList: ["./assets/images/truck.jpg",
+        img: ["./assets/images/truck.jpg",
             "./assets/images/mustang.jpg",
             "./assets/images/jeep.jpg",
             "./assets/images/vintagecar.jpg",
             "./assets/images/audi.jpg",
             "./assets/images/rangerover.jpg",
-            "./assets/images/foodtruck.jpg"
-        ]
+            "./assets/images/foodtruck.jpg"]
     }, {
         question: "How would you rather listen to your music?",
-        answerList: ["Headphones", "Blasting in the Car",
+        text: ["Headphones", "Blasting in the Car",
             "Music Festival", "Vinyl", "Party Inside a Club",
-            "Live Band at a Local Joint", "Bluetooth Speaker"
-        ]
+            "Live Band at a Local Joint", "Bluetooth Speaker"]
     }, {
         question: "You won the lottery! What is the first thing you do?",
-        answerList: ["Move off the grid", "Travel the World",
+        text: ["Move off the grid", "Travel the World",
             "Buy an Airstream and Travel", "Buy a Historical Castle",
             "Throw a Wild Party", "Quit Your Job and Do as You Please",
-            "Treat Yourelf to an Expensive Meal"
-        ]
+            "Treat Yourelf to an Expensive Meal"]
     }]
 
     var currentQuestion;
@@ -252,39 +254,75 @@ $(document).ready(function() {
         currentQuestion = 0;
         Answered = false;
 
-        newQuestion();
+        // newQuestion();
     }
+    var counter = 0;
 
-    function newQuestion() {
-        Answered = false;
-        $('#question').html('Question #' + (currentQuestion + 1) + '/' + Questions.length);
-        $('#question').html('<h3>' + Questions[currentQuestion].question + '</h3>');
-        for (var i = 0; i < Questions.length; i++) {
-            var choices = $('<div>');
-            choices.text(Questions[currentQuestion].answerList[i]);
-            choices.attr({
-                'data-index': i
-            });
-            choices.addClass('thisChoice');
-            $('#answerList').append(choices);
+    var generateQuestion = (answerList, question, type) => {
+        var questionDivContainer = $('<div>').attr('class', 'question');
+        var questionTag = $('<h2>').html(question);
+        var ulTag = $('<ul>');
+
+        for (var i = 0; i < answerList.length; i++) {
+            var question;
+            var choiceLI = $('<li class="choice">'); 
+            if (type === 'text') {
+                question = choiceLI.html(answerList[i]);
+            } else {
+                console.log(answerList[i]);
+                var img = $('<img class="imgAnswer">');
+                img.attr('src', answerList[i]);
+                question = choiceLI.html(img);
+            }
+            ulTag.append(question);
         }
 
-        $('.thisChoice').on('click', function() {
-            userSelect = $(this).data('index')
-            $('.thisChoice').empty();
-            $('#question').empty();
-            currentQuestion++;
-            newQuestion();
-            Answered = true;
+        questionDivContainer.append(questionTag, ulTag);
+        return questionDivContainer;
+    };
 
-        });
 
+    function startNewQuestion() {
+        
+            var questionTemplate;
+            var question = Questions[counter].question;
+
+            for (var key in Questions[counter]) {
+                var answerList = Questions[counter][key];;
+                if (key === 'text') {
+                    questionTemplate = generateQuestion(answerList, question, 'text');
+                }
+                if (key === 'img') {
+                    questionTemplate = generateQuestion(answerList, question, 'img');
+                }
+            }
+
+            // TODO: update where you want to append the question
+            $('.allQuestions').append(questionTemplate);
+
+        
     }
 
-    $('#info-button').on('click', function() {
-        $(this).hide();
-        startGame();
-
+    function nextQuestion (isBegining) {
+        $('.allQuestions').empty();
+        counter++;
+        if (isBegining) {
+            counter = 0;
+        }
+        if (counter < Questions.length - 1) {
+            startNewQuestion();
+        } else {
+            console.log("NO More Questions");
+        }
+    }
+    $('#info-button').on('click', function () {
+        
+        nextQuestion(true);
     });
+
+    $(document).on("click", ".choice", function() {
+        nextQuestion();
+    })
+
 
 });
