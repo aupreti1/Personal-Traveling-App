@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+    
+    
     var config = {
         apiKey: "AIzaSyCEEkKqWFKy24DDMpplraZp_XDdRW6kwZI",
         authDomain: "personality-vacation-quiz.firebaseapp.com",
@@ -11,15 +12,15 @@ $(document).ready(function () {
 
       firebase.initializeApp(config);
       var database = firebase.database();
-   
-      
+        
+      console.log('helloworld');
 
-      $("#info-button").on("click", function() {
+      $('#info-button').on('click', function() {
         event.preventDefault();
         
-        var firstName = $("#first_name").val().trim();
-        var lastName = $("#last_name").val().trim();
-        var email = $("#email").val().trim();
+        var firstName = $('#first_name').val().trim();
+        var lastName = $('#last_name').val().trim();
+        var email = $('#email').val().trim();
         
         var newUser = {
             FirstName: firstName,
@@ -33,7 +34,8 @@ $(document).ready(function () {
         console.log(newUser.lastName);
         console.log(newUser.email);
 
-        event.hide("#info-box");
+        $('#info-box').hide();
+      
 
     });
    
@@ -225,31 +227,43 @@ $(document).ready(function () {
 
     var currentQuestion;
 
-    var answered;
-    var userSelect;
+    var answered = 0;
+    var userSelect = 0;
 
     function startGame() {
         $('#answered').empty();
         $('#userSelect').empty();
-     
+        
         currentQuestion = 0;
-         
-        newQuestion()
+        Answered = false;
+
+        newQuestion();
     }
 
    function newQuestion() {
-       answered = true;
+       Answered = false;
+       $('#question').html('Question #' + (currentQuestion + 1) + '/' + Questions.length);
+        $('#question').html('<h3>' + Questions[currentQuestion].question + '</h3>');
        for (var i = 0; i < Questions.length; i++) {
            var choices = $('<div>');
            choices.text(Questions[currentQuestion].answerList[i]);
            choices.attr({'data-index': i });
            choices.addClass('thisChoice');
-           $('.answerList').append(choices);
+           $('#answerList').append(choices);
        }
 
        $('.thisChoice').on('click', function () {
            userSelect = $(this).data('index')
+           $('.thisChoice').empty();
+           $('#question').empty();
+           currentQuestion++;
+           newQuestion(); 
+           Answered = true;
+
+         
        });
+
+       
    }
 
    $('#info-button').on('click', function () {
@@ -259,6 +273,3 @@ $(document).ready(function () {
     });
 
     });
-
-
-});
