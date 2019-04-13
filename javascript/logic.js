@@ -12,7 +12,8 @@ $(document).ready(function() {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    console.log('helloworld');
+    const dbRefUser = database.ref('NewUser');
+
 
     $('#info-button').on('click', function() {
         event.preventDefault();
@@ -21,17 +22,12 @@ $(document).ready(function() {
         var lastName = $('#last_name').val().trim();
         var email = $('#email').val().trim();
 
-        var newUser = {
+        var newUser = dbRefUser.push({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
-        }
+        })
 
-        database.ref().push(newUser);
-
-        console.log(newUser.firstName);
-        console.log(newUser.lastName);
-        console.log(newUser.email);
 
         $('#info-box').hide();
 
