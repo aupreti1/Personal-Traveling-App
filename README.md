@@ -1,3 +1,5 @@
+live link: https://aupreti1.github.io/Personal-Traveling-App/
+
 Project Title:  Personal Travel App
 
 Team Members:  Margarita Munoz, Gabriella Tannous, Anastasia Upreti
