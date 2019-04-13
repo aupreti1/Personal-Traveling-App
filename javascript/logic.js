@@ -43,7 +43,7 @@ $(document).ready(function () {
     
     var Questions = [{
         question: "How would you prefer to spend a free afternoon?",
-        answerList: ["Alone in your bed with a good bool/movie", 
+        answerList: ["Alone in your bed with a good book/movie", 
         "Going out to try a new restaurant", 
         "Laying out under the stars enjoying the night", 
         "Re-watching your favorite historical movie or show", 
