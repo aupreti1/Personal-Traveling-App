@@ -135,3 +135,15 @@ audio {
   height: 30px;
   float: left;
 }
+
+h2 {
+  font-size: 35px;
+}
+
+.choice {
+  font-size: 20px;
+}
+
+ul {
+  background-color: rgb(36, 66, 186);
+}
