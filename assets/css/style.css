@@ -1,0 +1,137 @@
+body {
+  font-family: 'Karla', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+#info {
+  width: 50%;
+  margin-left: 230px;
+  left: auto;
+  right: auto;
+  padding-top: 30px;
+}
+
+#question {
+  padding-top: 20px;
+}
+
+#answerList {
+  margin-left: 160px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+#form-box {
+  margin-top: 50px;
+}
+
+#info-button {
+  background-color: white;
+  color: rgb(36, 66, 186);
+}
+
+header {
+  padding: 20px;
+  background-color: rgb(36, 66, 186);
+}
+
+footer {
+  padding: 20px;
+  background-color: rgb(36, 66, 186);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#card {
+  margin-top: 50px;
+  background-color: rgba(36, 66, 186, 0.94);
+}
+
+.input-field [type=text] {
+  color: white;
+}
+
+.input-field label {
+  color: #FFF;
+}
+
+.input-field input[type=text]:focus + label {
+  color: #FFF !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #FFF !important;
+  box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #FFF !important;
+  box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #FFF !important;
+  box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #FFF;
+}
+
+.input-field [type=email] {
+  color: white;
+}
+
+.input-field input[type=email]:focus + label {
+  color: #FFF !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #FFF !important;
+  box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+
+/* valid color */
+
+.input-field input[type=email].valid {
+  border-bottom: 1px solid #FFF !important;
+  box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+
+/* invalid color */
+
+.input-field input[type=email].invalid {
+  border-bottom: 1px solid #FFF !important;
+  box-shadow: 0 1px 0 0 #FFF !important;
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #FFF;
+}
+
+audio {
+  height: 30px;
+  float: left;
+}
