@@ -16,11 +16,6 @@ body {
   padding-top: 20px;
 }
 
-#answerList {
-  margin-left: 160px;
-  margin-top: 15px;
-  font-size: 18px;
-}
 
 #form-box {
   margin-top: 50px;
@@ -63,7 +58,6 @@ footer {
 
 
 /* label underline focus color */
-
 .input-field input[type=text]:focus {
   border-bottom: 1px solid #FFF !important;
   box-shadow: 0 1px 0 0 #FFF !important;
@@ -71,7 +65,6 @@ footer {
 
 
 /* valid color */
-
 .input-field input[type=text].valid {
   border-bottom: 1px solid #FFF !important;
   box-shadow: 0 1px 0 0 #FFF !important;
@@ -79,7 +72,6 @@ footer {
 
 
 /* invalid color */
-
 .input-field input[type=text].invalid {
   border-bottom: 1px solid #FFF !important;
   box-shadow: 0 1px 0 0 #FFF !important;
@@ -87,7 +79,6 @@ footer {
 
 
 /* icon prefix focus color */
-
 .input-field .prefix.active {
   color: #FFF;
 }
@@ -102,7 +93,6 @@ footer {
 
 
 /* label underline focus color */
-
 .input-field input[type=email]:focus {
   border-bottom: 1px solid #FFF !important;
   box-shadow: 0 1px 0 0 #FFF !important;
@@ -110,7 +100,6 @@ footer {
 
 
 /* valid color */
-
 .input-field input[type=email].valid {
   border-bottom: 1px solid #FFF !important;
   box-shadow: 0 1px 0 0 #FFF !important;
@@ -118,7 +107,6 @@ footer {
 
 
 /* invalid color */
-
 .input-field input[type=email].invalid {
   border-bottom: 1px solid #FFF !important;
   box-shadow: 0 1px 0 0 #FFF !important;
@@ -126,7 +114,6 @@ footer {
 
 
 /* icon prefix focus color */
-
 .input-field .prefix.active {
   color: #FFF;
 }
@@ -145,10 +132,17 @@ h2 {
 }
 
 img {
-  margin: 0px 50px 0px 0px;
-  padding-bottom: 10px;
-  padding-left: 25px;
+  padding-bottom: 20px;
+  padding-left: 15px;
   float: left;
-  height: 155px;
+  height: 160px;
   width: 160px;
 }
+
+.imgAnswer {
+  margin-left: 40px;
+}
+
+.choice:hover { 
+  transform: scale(1.1); 
+  }

@@ -301,8 +301,8 @@ $(document).ready(function () {
            console.log("NO More Questions");
         }
     }
+    
     $('#info-button').on('click', function () {
-        
         nextQuestion(true);
     });
 
