@@ -4,7 +4,7 @@ let afternoon, read, movie, shoes, color, show, career, music, live, communicati
 superpower, animal, hobby, quality, celeb, date, house, food, annoy, vehicle, listen, lottery;
 
 function processResults(){
-    console.log('processResults')
+    console.log(processResults)
     //get the checked boxes for each question category
     afternoon = document.querySelector('input[name="afternoon"]:checked');
     read = document.querySelector('input[name="read"]:checked');
@@ -74,7 +74,7 @@ if(personality == 1){
 }
 
 function getPersonality(){
-    console.log('getPersonality')
+    console.log(getPersonality)
     let score = 0;
     score += afternoonDict[afternoon.id];
     score += readDict[read.id];
@@ -99,7 +99,6 @@ function getPersonality(){
     score += vehicleDict[vehicle.id];
     score += listenDict[listen.id];
     score += lotteryDict[lottery.id];
-
 }
 
 let afternoonDict = {
