@@ -31,14 +31,14 @@ function processResults(){
     lottery = document.querySelector('input[name="lottery"]:checked');
 }
 //if any of them don't have a checked option, alert the user and return to stop
-if(afternoon == undefined || read == undefined || movie == undefined || shoes == undefined || color == undefined || 
-    show == undefined || career == undefined || music == undefined || live == undefined || communication == undefined || 
-    satisfying == undefined || superpower == undefined || animal == undefined || hobby == undefined || 
-    quality == undefined || celeb == undefined || date == undefined || house == undefined || food == undefined || 
-    annoy == undefined || vehicle == undefined || listen == undefined || lottery == undefined){
-        alert('Make sure you select an answer!');
-        return;
-    }
+//if(afternoon == undefined || read == undefined || movie == undefined || shoes == undefined || color == undefined || 
+   // show == undefined || career == undefined || music == undefined || live == undefined || communication == undefined || 
+   // satisfying == undefined || superpower == undefined || animal == undefined || hobby == undefined || 
+   // quality == undefined || celeb == undefined || date == undefined || house == undefined || food == undefined || 
+    //annoy == undefined || vehicle == undefined || listen == undefined || lottery == undefined){
+        //;
+        //return;
+   // }
 
 let personality = getPersonality();
 let name;
