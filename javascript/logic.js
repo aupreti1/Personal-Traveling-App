@@ -64,7 +64,7 @@ $(document).ready(function () {
         img: ["./assets/images/wallflower.jpg",
             "./assets/images/midnight.jpg",
             "./assets/images/grizzlyman.jpg",
-            "./asseets/images/pride.jpg",
+            "./assets/images/pride.jpg",
             "./assets/images/hangover.jpg",
             "./assets/images/howtolose.jpg",
             "./assets/images/julieandjulia.jpg"]
@@ -76,7 +76,7 @@ $(document).ready(function () {
             "./assets/images/boots.jpg",
             "./assets/images/convers.jpg",
             "./assets/images/heels.jpg",
-            ".assets/images/slides.jpg",
+            "./assets/images/nike.jpg",
             "./assets/images/runningshoes.jpg"]
 
     }, {
@@ -146,13 +146,13 @@ $(document).ready(function () {
             "./assets/images/speed.jpg",
             "./assets/images/mindreading.jpg",
             "./assets/images/telekinesis.jpg",
-            "./assets/images/plantbasedpowers"]
+            "./assets/images/plantbased.jpg"]
 
     }, {
         question: "Which of these could be your spirit animals?",
         img: ["./assets/images/cat.jpg",
             "./assets/images/owl.jpg",
-            ".assets/images/horse",
+            "./assets/images/horse.jpg",
             "./assets/images/dino.jpg",
             "./assets/images/monkey.jpg",
             "./assets/images/dog.jpg",
@@ -176,7 +176,7 @@ $(document).ready(function () {
         img: ["./assets/images/johnnydepp.jpg",
             "./assets/images/angelinajolie.jpg",
             "./assets/images/zacefron.jpg",
-            "./assets/images/georgeclooney",
+            "./assets/images/georgeclooney.jpg",
             "./assets/images/leonardodicaprio.jpg",
             "./assets/images/sandrabullock.jpg",
             "./assets/images/chrissyteigen.jpg"]
@@ -208,7 +208,7 @@ $(document).ready(function () {
             "./assets/images/wineandcheese.jpg",
             "./assets/images/drinks.jpg",
             "./assets/images/hamburgerandfries.jpg",
-            "./assets/images/fancyfoods"]
+            "./assets/images/fancyfoods.jpg"]
 
     }, {
         question: "Which of these annoys you the most?",
@@ -242,20 +242,6 @@ $(document).ready(function () {
             "Treat Yourelf to an Expensive Meal"]
     }]
 
-    var currentQuestion;
-
-    var answered = 0;
-    var userSelect = 0;
-
-    function startGame() {
-        $('#answered').empty();
-        $('#userSelect').empty();
-
-        currentQuestion = 0;
-        Answered = false;
-
-        // newQuestion();
-    }
     var counter = 0;
 
     var generateQuestion = (answerList, question, type) => {
@@ -309,14 +295,14 @@ $(document).ready(function () {
         if (isBegining) {
             counter = 0;
         }
-        if (counter < Questions.length - 1) {
+        if (counter < Questions.length) {
             startNewQuestion();
         } else {
-            console.log("NO More Questions");
+           console.log("NO More Questions");
         }
     }
+    
     $('#info-button').on('click', function () {
-        
         nextQuestion(true);
     });
 
