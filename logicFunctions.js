@@ -6,29 +6,29 @@ superpower, animal, hobby, quality, celeb, date, house, food, annoy, vehicle, li
 function processResults(){
     console.log(processResults)
     //get the checked boxes for each question category
-    afternoon = document.querySelector('input[name="afternoon"]:checked');
-    read = document.querySelector('input[name="read"]:checked');
-    movie = document.querySelector('input[name="movie"]:checked');
-    shoes = document.querySelector('input[name="shoes"]:checked');
-    color = document.querySelector('input[name="color"]:checked');
-    show = document.querySelector('input[name="show"]:checked');
-    career = document.querySelector('input[name="career"]:checked');
-    music = document.querySelector('input[name="music"]:checked');
-    live = document.querySelector('input[name="live"]:checked');
-    communication = document.querySelector('input[name="communication"]:checked');
-    satisfying = document.querySelector('input[name="satisfying"]:checked');
-    superpower = document.querySelector('input[name="superpower"]:checked');
-    animal = document.querySelector('input[name="animal"]:checked');
-    hobby = document.querySelector('input[name="hobby"]:checked');
-    quality = document.querySelector('input[name="quality"]:checked');
-    celeb = document.querySelector('input[name="celeb"]:checked');
-    date = document.querySelector('input[name="date"]:checked');
-    house = document.querySelector('input[name="house"]:checked');
-    food = document.querySelector('input[name="food"]:checked');
-    annoy = document.querySelector('input[name="annoy"]:checked');
-    vehicle = document.querySelector('input[name="vehicle"]:checked');
-    listen = document.querySelector('input[name="listen"]:checked');
-    lottery = document.querySelector('input[name="lottery"]:checked');
+    afternoon = document.click('input[name="afternoon"]:clicked');
+    read = document.click('input[name="read"]:clicked');
+    movie = document.click('input[name="movie"]:clicked');
+    shoes = document.click('input[name="shoes"]:clicked');
+    color = document.click('input[name="color"]:clicked');
+    show = document.click('input[name="show"]:clicked');
+    career = document.click('input[name="career"]:clicked');
+    music = document.click('input[name="music"]:clicked');
+    live = document.click('input[name="live"]:clicked');
+    communication = document.click('input[name="communication"]:clicked');
+    satisfying = document.click('input[name="satisfying"]:clicked');
+    superpower = document.click('input[name="superpower"]:clicked');
+    animal = document.click('input[name="animal"]:clicked');
+    hobby = document.click('input[name="hobby"]:clicked');
+    quality = document.click('input[name="quality"]:clicked');
+    celeb = document.click('input[name="celeb"]:clicked');
+    date = document.click('input[name="date"]:clicked');
+    house = document.click('input[name="house"]:clicked');
+    food = document.click('input[name="food"]:clicked');
+    annoy = document.click('input[name="annoy"]:clicked');
+    vehicle = document.click('input[name="vehicle"]:clicked');
+    listen = document.click('input[name="listen"]:clicked');
+    lottery = document.click('input[name="lottery"]:clicked');
 }
 //if any of them don't have a checked option, alert the user and return to stop
 //if(afternoon == undefined || read == undefined || movie == undefined || shoes == undefined || color == undefined || 
