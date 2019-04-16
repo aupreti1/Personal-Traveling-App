@@ -135,3 +135,20 @@ audio {
   height: 30px;
   float: left;
 }
+
+h2 {
+  font-size: 35px;
+}
+
+.choice {
+  font-size: 20px;
+}
+
+img {
+  margin: 0px 50px 0px 0px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  float: left;
+  height: 155px;
+  width: 160px;
+}
