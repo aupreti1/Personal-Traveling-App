@@ -67,14 +67,14 @@ if(personality == 1){
     name = "Relaxing";
     pageTitle.innerHTML = 'You are the ${name} type!!'
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
-} else (personality == 7) {
+} else if (personality == 7) {
     name = "Foodie";
     pageTitle.innerHTML = 'You are the ${name} type!!'
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 }
 
 function getPersonality(){
-    console.log('getPersonality')
+    console.log(getPersonality);
     let score = 0;
     score += afternoonDict[afternoon.id];
     score += readDict[read.id];
