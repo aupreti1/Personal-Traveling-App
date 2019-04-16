@@ -144,6 +144,11 @@ h2 {
   font-size: 20px;
 }
 
-ul {
-  background-color: rgb(36, 66, 186);
+img {
+  margin: 0px 50px 0px 0px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  float: left;
+  height: 155px;
+  width: 160px;
 }
