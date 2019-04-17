@@ -298,7 +298,7 @@ var generateQuestion = (answerList, question, type) => {
             console.log(answerList[i]);
             var img = $('<img class="imgAnswer">');
             img.attr('src', answerList[i]);
-            question = choiceLI.html(img);
+            question = choiceLI.html(img); 
         }
         ulTag.append(question);
     }
