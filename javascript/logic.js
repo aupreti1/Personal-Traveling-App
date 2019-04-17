@@ -298,7 +298,7 @@ var generateQuestion = (answerList, question, type) => {
             console.log(answerList[i]);
             var img = $('<img class="imgAnswer">');
             img.attr('src', answerList[i]);
-            question = choiceLI.html(img);
+            question = choiceLI.html(img); 
         }
         ulTag.append(question);
     }
@@ -392,8 +392,32 @@ $(document).on("click", ".choice", function () {
                 return prev;
             }
             return current;
+        
         }) 
         console.log('User Result: ', userResult);
+       
+        if(userResult == secluded){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 Locations that fit your personality best: <br> Glacier Bay, Alaska <br> Tasmania, Australia <br> Scottish Highlands <br> Salar de Uyuni, Bolivia');
+        } else if (userResult == touristic){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Paris, France <br> Yellowstone, Wyoming <br> Rome, Italy <br> London, England <br> ');
+        } else if (userResult == outdoors){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Banff National Park, Canada <br> Yosemite National Park, California <br> Milford Track, New Zealand <br> Ningaloo Reef, Australia <br>');
+        }else if (userResult == historical){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Machu Picchu, Peru <br> Tikal, Guatemala <br> San Antonio, Texas <br> Stonehenge, UK <br>');
+        }else if (userResult == party){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Mykonos, Greece <br> Amsterdam, Netherlands <br> Ibiza, Spain <br> New Orleans, Louisiana <br>');
+        }else if (userResult == relaxing){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Dry Tortugas, Florida <br> Snowmass, Colorado <br> Sebago Lake, Maine <br> Pienza, Italy <br> ');
+        }else if (userResult == foodie){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Chicago, Illinois <br> Manila, Philippines <br> Tuscany, Italy <br> Catalunya, Spain <br> ');
+        }
     }
 
     console.log('Secluded Score: ', secluded);
@@ -408,3 +432,11 @@ $(document).on("click", ".choice", function () {
 
 
 });
+
+var ShowSecLocs = ["Glacier Bay Alaska", "Tasmania Australia", "Scottish Highlands", "Salar De Uyuni Bolivia"]
+var ShowTourLocs = ["Paris France", "Yellowstone Wyoming", "Rome Italy", "London England"]
+var ShowOutLocs = ["Banf National Park Canada", "Yosemite National Park California", "Milford Track New Zealand", "Ningaloo Reef Australia"]
+var ShowHistLocs = ["Machu Picchu Peru", "Tikal Guatemala", "San Antonio Texas", "Stonehenge UK"]
+var ShowParLocs = ["Mykonos Greece", "Amsterdam Netherlands", "Ibiza Spain", "New Orleans Louisiana"]
+var ShowRelLocs = ["Dry Tortugas Florida", "Snowmass Colorado", "Sebago Lake Maine", "Pienza Italy"]
+var ShowFoodLocs = ["Chicago Illinois", "Manila Philippines", "Tuscany Italy", "Catalunya Spain"]
