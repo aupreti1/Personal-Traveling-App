@@ -398,25 +398,32 @@ $(document).on("click", ".choice", function () {
        
         if(userResult == secluded){
             $('.allQuestions').empty();
-            $('.allQuestions').append('These are 4 Locations that fit your personality best: <br> Glacier Bay, Alaska <br> Tasmania, Australia <br> Scottish Highlands <br> Salar de Uyuni, Bolivia');
+            $('.allQuestions').append('These are 4 Locations that fit your personality best: <br> Glacier Bay, Alaska <br> Tasmania, Austrailia <br> Scottish Highlands <br> Salar de Uyuni, Bolivia');
+            $('.allQuestions').append(ShowSecLocs);
         } else if (userResult == touristic){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Paris, France <br> Yellowstone, Wyoming <br> Rome, Italy <br> London, England <br> ');
+            $('.allQuestions').append(ShowTourLocs);
         } else if (userResult == outdoors){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Banff National Park, Canada <br> Yosemite National Park, California <br> Milford Track, New Zealand <br> Ningaloo Reef, Australia <br>');
+            $('.allQuestions').append(ShowOutLocs);
         }else if (userResult == historical){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Machu Picchu, Peru <br> Tikal, Guatemala <br> San Antonio, Texas <br> Stonehenge, UK <br>');
+            $('.allQuestions').append(ShowHistLocs);
         }else if (userResult == party){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Mykonos, Greece <br> Amsterdam, Netherlands <br> Ibiza, Spain <br> New Orleans, Louisiana <br>');
+            $('.allQuestions').append(ShowParLocs);
         }else if (userResult == relaxing){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Dry Tortugas, Florida <br> Snowmass, Colorado <br> Sebago Lake, Maine <br> Pienza, Italy <br> ');
+            $('.allQuestions').append(ShowRelLocs);
         }else if (userResult == foodie){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Chicago, Illinois <br> Manila, Philippines <br> Tuscany, Italy <br> Catalunya, Spain <br> ');
+            $('.allQuestions').append(ShowFoodLocs);
         }
     }
 
@@ -427,6 +434,8 @@ $(document).on("click", ".choice", function () {
     console.log('Party Score: ', party);
     console.log('Relaxing Score: ', relaxing);
     console.log('Foodie Score: ', foodie);
+    
+    
     
 })
 
