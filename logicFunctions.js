@@ -49,27 +49,27 @@ if(personality == 1){
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 } else if (personality == 2) {
     name = "Touristic";
-    pageTitle.innerHTML = 'You are the ${name} type!!'
+    pageTitle.innerHTML = 'You are the ${name} type!!';
     result.style.backgroundImage = "url ('images/IMAGELINKHERE.jpg')";
 } else if (personality == 3) {
     name = "Outdoors";
-    pageTitle.innerHTML = 'You are the ${name} type!!'
+    pageTitle.innerHTML = 'You are the ${name} type!!';
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 } else if (personality == 4) {
     name = "Historical";
-    pageTitle.innerHTML = 'You are the ${name} type!!'
+    pageTitle.innerHTML = 'You are the ${name} type!!';
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 } else if (personality == 5) {
     name = "Party";
-    pageTitle.innerHTML = 'You are the ${name} type!!'
+    pageTitle.innerHTML = 'You are the ${name} type!!';
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 } else if (personality == 6) {
     name = "Relaxing";
-    pageTitle.innerHTML = 'You are the ${name} type!!'
+    pageTitle.innerHTML = 'You are the ${name} type!!';
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 } else (personality == 7) {
     name = "Foodie";
-    pageTitle.innerHTML = 'You are the ${name} type!!'
+    pageTitle.innerHTML = 'You are the ${name} type!!';
     result.style.backgroundImage = "url('images/IMAGELINKHERE.jpg')";
 }
 

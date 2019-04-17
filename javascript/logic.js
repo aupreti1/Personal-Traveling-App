@@ -1,5 +1,43 @@
 $(document).ready(function () {
 
+    var totalScore = 0;
+
+    var secluded = {
+        count: 0,
+        result: 0,
+        name: 'seclude'
+    };
+    var touristic = {
+        count: 0,
+        result: 0,
+        name: 'touristic'
+    };
+    var outdoors = {
+        count: 0,
+        result: 0,
+        name: 'outdoors'
+    };
+    var historical = {
+        count: 0,
+        result: 0,
+        name: 'historical'
+    };
+    var party = {
+        count: 0,
+        result: 0,
+        name: 'party'
+    };
+    var relaxing = {
+        count: 0,
+        result: 0,
+        name: 'relaxing'
+    };
+    var foodie = {
+        count: 0,
+        result: 0,
+        name: 'foodie'
+    };
+
 
     var config = {
         apiKey: "AIzaSyCEEkKqWFKy24DDMpplraZp_XDdRW6kwZI",
@@ -16,7 +54,7 @@ $(document).ready(function () {
     const dbRefUser = database.ref('NewUser');
 
 
-    $('#info-button').on('click', function() {
+    $('#info-button').on('click', function () {
         event.preventDefault();
 
         var firstName = $('#first_name').val().trim();
@@ -78,7 +116,6 @@ $(document).ready(function () {
             "./assets/images/heels.jpg",
             "./assets/images/nike.jpg",
             "./assets/images/runningshoes.jpg"]
-
     }, {
         question: "What is your favorite color?",
         img: ["./assets/images/black.jpg",
@@ -240,75 +277,134 @@ $(document).ready(function () {
             "Buy an Airstream and Travel", "Buy a Historical Castle",
             "Throw a Wild Party", "Quit Your Job and Do as You Please",
             "Treat Yourelf to an Expensive Meal"]
-    }]
+    }];
+
+    
 
     var counter = 0;
 
-    var generateQuestion = (answerList, question, type) => {
-        var questionDivContainer = $('<div>').attr('class', 'question');
-        var questionTag = $('<h2>').html(question);
-        var ulTag = $('<ul>');
+var generateQuestion = (answerList, question, type) => {
+    var questionDivContainer = $('<div>').attr('class', 'question');
+    var questionTag = $('<h2>').html(question);
+    var ulTag = $('<ul>');
 
-        for (var i = 0; i < answerList.length; i++) {
-            var question;
-            var choiceLI = $('<li class="choice">'); 
-            if (type === 'text') {
-                question = choiceLI.html(answerList[i]);
-            } else {
-                console.log(answerList[i]);
-                var img = $('<img class="imgAnswer">');
-                img.attr('src', answerList[i]);
-                question = choiceLI.html(img);
-            }
-            ulTag.append(question);
-        }
-
-        questionDivContainer.append(questionTag, ulTag);
-        return questionDivContainer;
-    };
-
-
-    function startNewQuestion() {
-        
-            var questionTemplate;
-            var question = Questions[counter].question;
-
-            for (var key in Questions[counter]) {
-                var answerList = Questions[counter][key];;
-                if (key === 'text') {
-                    questionTemplate = generateQuestion(answerList, question, 'text');
-                }
-                if (key === 'img') {
-                    questionTemplate = generateQuestion(answerList, question, 'img');
-                }
-            }
-
-            // TODO: update where you want to append the question
-            $('.allQuestions').append(questionTemplate);
-
-        
-    }
-
-    function nextQuestion (isBegining) {
-        $('.allQuestions').empty();
-        counter++;
-        if (isBegining) {
-            counter = 0;
-        }
-        if (counter < Questions.length) {
-            startNewQuestion();
+    for (var i = 0; i < answerList.length; i++) {
+        var question;
+        var result = i + 1;
+        var choiceLI = $('<li class="choice" data-choice="' + result + '">');
+        if (type === 'text') {
+            question = choiceLI.html(answerList[i]);
         } else {
-           console.log("NO More Questions");
+            console.log(answerList[i]);
+            var img = $('<img class="imgAnswer">');
+            img.attr('src', answerList[i]);
+            question = choiceLI.html(img);
+        }
+        ulTag.append(question);
+    }
+
+    questionDivContainer.append(questionTag, ulTag);
+    return questionDivContainer;
+};
+
+
+function startNewQuestion() {
+
+    var questionTemplate;
+    var question = Questions[counter].question;
+
+    for (var key in Questions[counter]) {
+        var answerList = Questions[counter][key];;
+        if (key === 'text') {
+            questionTemplate = generateQuestion(answerList, question, 'text');
+        }
+        if (key === 'img') {
+            questionTemplate = generateQuestion(answerList, question, 'img');
         }
     }
-    
-    $('#info-button').on('click', function () {
-        nextQuestion(true);
-    });
 
-    $(document).on("click", ".choice", function() {
-        nextQuestion();
-    })
+    $('.allQuestions').append(questionTemplate);
+
+
+}
+
+function nextQuestion(isBegining) {
+    $('.allQuestions').empty();
+    counter++;
+    if (isBegining) {
+        counter = 0;
+    }
+    if (counter < Questions.length) {
+        startNewQuestion();
+    } else {
+        console.log("NO More Questions");
+    }
+}
+
+$('#info-button').on('click', function () {
+    nextQuestion(true);
+});
+
+$(document).on("click", ".choice", function () {
+    nextQuestion();
+
+    var result = parseInt($(this).attr('data-choice')); // convert this to number
+
+    if (result === 1) {
+        secluded.result += result;
+        secluded.count += 1;
+    } else if (result === 2) {
+        touristic.result += result;
+        touristic.count += 1;
+    } else if (result === 3) {
+        outdoors.result += result;
+        outdoors.count += 1;
+    } else if (result === 4) {
+        historical.result += result;
+        historical.count += 1;
+    } else if (result === 5) {
+        party.result += result;
+        party.count += 1;
+    } else if (result === 6) {
+        relaxing.result += result;
+        relaxing.count += 1;
+    } else if (result === 7) {
+        foodie.result += result;
+        foodie.count += 1;
+    }
+
+
+    // User reach the end of the questions
+    if (counter === Questions.length) {
+        var userSelection = [
+            secluded,
+            touristic,
+            outdoors,
+            historical,
+            party,
+            relaxing,
+            foodie,
+        ];
+
+
+        var userResult = userSelection.reduce(function (prev, current) {
+            if (prev.count > current.count) {
+                return prev;
+            }
+            return current;
+        }) 
+        console.log('User Result: ', userResult);
+    }
+
+    console.log('Secluded Score: ', secluded);
+    console.log('Touristic Score: ', touristic);
+    console.log('Outdoors Score: ', outdoors);
+    console.log('Historical Score: ', historical);
+    console.log('Party Score: ', party);
+    console.log('Relaxing Score: ', relaxing);
+    console.log('Foodie Score: ', foodie);
+    
+})
 
 
 });
