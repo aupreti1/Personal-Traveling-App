@@ -51,7 +51,7 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    const dbRefUser = database.ref('NewUser');
+    const dbRefUser = database.ref('newUser');
 
 
     $('#info-button').on('click', function () {
@@ -61,7 +61,7 @@ $(document).ready(function () {
         var lastName = $('#last_name').val().trim();
         var email = $('#email').val().trim();
 
-        var newUser = dbRefUser.push({
+        dbRefUser.push({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
