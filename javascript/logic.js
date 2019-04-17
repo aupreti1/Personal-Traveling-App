@@ -76,7 +76,7 @@ $(document).ready(function () {
 
 
     var Questions = [{
-        afternoon: "How would you prefer to spend a free afternoon?",
+        question: "How would you prefer to spend a free afternoon?",
         text: [
             "Alone in your bed with a good book/movie",
             "Going out to try a new restaurant",
@@ -87,7 +87,7 @@ $(document).ready(function () {
             "In the kitchen creating new concoctions of snacks"]
 
     }, {
-        read: "What would you rather read?",
+        question: "What would you rather read?",
         img: [
             "./assets/images/ripper.jpg",
             "./assets/images/travelingpants.jpg",
@@ -98,7 +98,7 @@ $(document).ready(function () {
             "./assets/images/eatpraylove.jpg"]
 
     }, {
-        movie: "What movie would you prefer to watch?",
+        question: "What movie would you prefer to watch?",
         img: ["./assets/images/wallflower.jpg",
             "./assets/images/midnight.jpg",
             "./assets/images/grizzlyman.jpg",
@@ -108,7 +108,7 @@ $(document).ready(function () {
             "./assets/images/julieandjulia.jpg"]
 
     }, {
-        shoes: "What shoes would you rather wear any day/all day?",
+        question: "What shoes would you rather wear any day/all day?",
         img: ["./assets/images/bedslippers.jpg",
             "./assets/images/chacos.jpg",
             "./assets/images/boots.jpg",
@@ -117,7 +117,7 @@ $(document).ready(function () {
             "./assets/images/nike.jpg",
             "./assets/images/runningshoes.jpg"]
     }, {
-        color: "What is your favorite color?",
+        question: "What is your favorite color?",
         img: ["./assets/images/black.jpg",
             "./assets/images/blue.jpg",
             "./assets/images/green.jpg",
@@ -127,7 +127,7 @@ $(document).ready(function () {
             "./assets/images/red.jpg"]
 
     }, {
-        show: "What show would you prefer to watch?",
+        question: "What show would you prefer to watch?",
         img: ["./assets/images/penny.jpg",
             "./assets/images/darktourist.jpg",
             "./assets/images/blueplanet.jpg",
@@ -137,7 +137,7 @@ $(document).ready(function () {
             "./assets/images/cupcake.jpg"]
 
     }, {
-        career: "What would be your dream career?",
+        question: "What would be your dream career?",
         text: ["Medical Lab Technician",
             "Flight Attendant",
             "Marine Biologist",
@@ -147,27 +147,27 @@ $(document).ready(function () {
             "Recipe Tester"]
 
     }, {
-        music: "What music genre do you prefer?",
+        question: "What music genre do you prefer?",
         text: ["Rock and Roll",
             "Pop Music", "Folk Music",
             "Country Music", "House Music",
             "Classical Music", "Punk Rock"]
 
     }, {
-        live: "What could you NOT live without?",
+        question: "What could you NOT live without?",
         text: ["Netflix/Hulu",
             "Cell Phone", "Favorite Sneakers",
             "Favorite Book", "Booze", "Pet",
             "Favorite Food"]
 
     }, {
-        communication: "What is your preferred way of communication?",
+        question: "What is your preferred way of communication?",
         text: ["None", "FaceTime",
             "Face to Face", "Letters",
             "Snapchat", "Text", "Instagram"]
 
     }, {
-        satisfying: "Which of these do you find most satisfying?",
+        question: "Which of these do you find most satisfying?",
         text: ["Spending time on your own",
             "Seeing new places", "Hiking",
             "Reading about different times and places",
@@ -176,7 +176,7 @@ $(document).ready(function () {
             "Discovering new places to eat"]
 
     }, {
-        superpower: "Which of these superpowers sound more appealing?",
+        question: "Which of these superpowers sound more appealing?",
         img: ["./assets/images/weather.jpg",
             "./assets/images/superman.jpg",
             "./assets/images/fire.jpg",
@@ -186,7 +186,7 @@ $(document).ready(function () {
             "./assets/images/plantbased.jpg"]
 
     }, {
-        animal: "Which of these could be your spirit animals?",
+        question: "Which of these could be your spirit animals?",
         img: ["./assets/images/cat.jpg",
             "./assets/images/owl.jpg",
             "./assets/images/horse.jpg",
@@ -196,20 +196,20 @@ $(document).ready(function () {
             "./assets/images/bear.jpg"]
 
     }, {
-        hobby: "Which of these hobbies interest you the most?",
+        question: "Which of these hobbies interest you the most?",
         text: ["Coloring Books",
             "Learning a language", "Camping",
             "Reading", "Dancing", "Yoga",
             "Cooking"]
 
     }, {
-        quality: "Which of these qualities is most appealing in a partner/friend",
+        question: "Which of these qualities is most appealing in a partner/friend",
         text: ["Loyalty", "Adventurous",
             "Patient", "Intelligent", "Fun",
             "Laid Back", "Open Minded"]
 
     }, {
-        celeb: "Which of these celebs would you want to meet?",
+        question: "Which of these celebs would you want to meet?",
         img: ["./assets/images/johnnydepp.jpg",
             "./assets/images/angelinajolie.jpg",
             "./assets/images/zacefron.jpg",
@@ -219,7 +219,7 @@ $(document).ready(function () {
             "./assets/images/chrissyteigen.jpg"]
 
     }, {
-        date: "What is your ideal date?",
+        question: "What is your ideal date?",
         text: ["No date for me! I'd rather hang with my fur child",
             "Going for a tour around the city",
             "Hiking a mountain",
@@ -228,7 +228,7 @@ $(document).ready(function () {
             "Dinner and a movie",
             "Going to a high-end restaurant with a 7-course meal"]
     }, {
-        house: "What picture most constitutes as your dream house?",
+        question: "What picture most constitutes as your dream house?",
         img: ["./assets/images/secludedhouse.jpg",
             "./assets/images/touristichouse.jpg",
             "./assets/images/outdoorshouse.jpg",
@@ -238,7 +238,7 @@ $(document).ready(function () {
             "./assets/images/foodiehouse.jpg"]
 
     }, {
-        food: "Which would you rather have?",
+        question: "Which would you rather have?",
         img: ["./assets/images/benandjerrys.jpg",
             "./assets/images/macaroons.jpg",
             "./assets/images/foodinapot.jpg",
@@ -248,7 +248,7 @@ $(document).ready(function () {
             "./assets/images/fancyfoods.jpg"]
 
     }, {
-        annoy: "Which of these annoys you the most?",
+        question: "Which of these annoys you the most?",
         text: ["People who are mean to others",
             "Being bored with nothing to do",
             "People who constantly complain",
@@ -258,7 +258,7 @@ $(document).ready(function () {
             "Messy House"]
 
     }, {
-        vehicle: "What vehicle would you rather drive?",
+        question: "What vehicle would you rather drive?",
         img: ["./assets/images/truck.jpg",
             "./assets/images/mustang.jpg",
             "./assets/images/jeep.jpg",
@@ -267,12 +267,12 @@ $(document).ready(function () {
             "./assets/images/rangerover.jpg",
             "./assets/images/foodtruck.jpg"]
     }, {
-        listen: "How would you rather listen to your music?",
+        question: "How would you rather listen to your music?",
         text: ["Headphones", "Blasting in the Car",
             "Music Festival", "Vinyl", "Party Inside a Club",
             "Live Band at a Local Joint", "Bluetooth Speaker"]
     }, {
-        lottery: "You won the lottery! What is the first thing you do?",
+        question: "You won the lottery! What is the first thing you do?",
         text: ["Move off the grid", "Travel the World",
             "Buy an Airstream and Travel", "Buy a Historical Castle",
             "Throw a Wild Party", "Quit Your Job and Do as You Please",
