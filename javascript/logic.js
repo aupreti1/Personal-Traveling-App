@@ -392,8 +392,14 @@ $(document).on("click", ".choice", function () {
                 return prev;
             }
             return current;
+        
         }) 
         console.log('User Result: ', userResult);
+       
+        if(userResult == secluded){
+            $('.allQuestions').empty();
+            $('.allQuestions').append('These are 4 Locations that fit your personality best: <br> Glacier Bay, Alaska <br> Tasmania, Austrailia <br> Scottish Highlands <br> Salar de Uyuni, Bolivia');
+        }
     }
 
     console.log('Secluded Score: ', secluded);
