@@ -4,6 +4,14 @@ body {
   text-align: center;
 }
 
+ul {
+  margin-top: 20px;
+}
+
+h2 {
+  padding-top:25px;
+}
+
 #info {
   width: 50%;
   margin-left: 230px;
