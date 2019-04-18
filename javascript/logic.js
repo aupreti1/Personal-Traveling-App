@@ -488,22 +488,31 @@ $(document).on("click", ".choice", function () {
     console.log('Relaxing Score: ', relaxing);
     console.log('Foodie Score: ', foodie);
 
-})
-//     var location = " "
-//     var limit = 1
-//     var queryUrl = "https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=" + location + "&limit=" + limit + "&image_type=photo"
+
+
+    $('.allQuestions').on('click', function(){
+     var Locations = [SecLocs,TourLocs,OutLocs,HistLocs,ParLocs,RelLocs,FoodLocs]
+     var limit = 1
+     var queryUrl = "https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=" + Locations + "&limit=" + limit + "&image_type=photo"
     
-//     $.ajax({
-//      url: queryUrl ,
-//      method: 'GET'
-//      }).then(function(response) {
-//          console.log(response)
-    
-   
-//     }
-//  }) 
- 
- });
+    $.ajax({
+     url: queryUrl ,
+      method: 'GET'
+      }).then(function(response) {
+          console.log(response)
+
+        var locationDiv = $("<div class = 'location'>");
+
+        var imageURL = response.showLocs;
+        
+        var image = $("<img>").attr("src", imageURL);
+      })
+});
+});
+
+});
+
+
 
 
 
