@@ -395,35 +395,87 @@ $(document).on("click", ".choice", function () {
         
         }) 
         console.log('User Result: ', userResult);
-       
+        var SecLocs = ["Glacier Bay Alaska", "Tasmania Australia", "Scottish Highlands", "Salar De Uyuni Bolivia"]
+        var TourLocs = ["Paris France", "Yellowstone Wyoming", "Rome Italy", "London England"]
+        var OutLocs = ["Banf National Park Canada", "Yosemite National Park California", "Milford Track New Zealand", "Ningaloo Reef Australia"]
+        var HistLocs = ["Machu Picchu Peru", "Tikal Guatemala", "San Antonio Texas", "Stonehenge UK"]
+        var ParLocs = ["Mykonos Greece", "Amsterdam Netherlands", "Ibiza Spain", "New Orleans Louisiana"]
+        var RelLocs = ["Dry Tortugas Florida", "Snowmass Colorado", "Sebago Lake Maine", "Pienza Italy"]
+        var FoodLocs = ["Chicago Illinois", "Manila Philippines", "Tuscany Italy", "Catalunya Spain"]
+        
+
         if(userResult == secluded){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 Locations that fit your personality best: <br> Glacier Bay, Alaska <br> Tasmania, Austrailia <br> Scottish Highlands <br> Salar de Uyuni, Bolivia');
-            $('.allQuestions').append(ShowSecLocs);
+            
+        for (var i = 0; i < SecLocs.length; i++) {
+            var SecOptions = $("<button>")
+            SecOptions.addClass("locations");
+            SecOptions.attr("data-name", SecLocs[i]);
+            SecOptions.text(SecLocs[i]);
+            } console.log(SecOptions);
+            
+            $('.allQuestions').append(SecOptions);
         } else if (userResult == touristic){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Paris, France <br> Yellowstone, Wyoming <br> Rome, Italy <br> London, England <br> ');
-            $('.allQuestions').append(ShowTourLocs);
+        for (var i = 0; i < TourLocs.length; i++) {
+            var TourOption = $("<button>")
+            TourOption.addClass("location")
+            TourOption.attr("image", TourLocs[i]);
+            TourOption.text(TourLocs[i]);
+            }
+            $('.allQuestions').append(TourLocs);
         } else if (userResult == outdoors){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Banff National Park, Canada <br> Yosemite National Park, California <br> Milford Track, New Zealand <br> Ningaloo Reef, Australia <br>');
-            $('.allQuestions').append(ShowOutLocs);
+               for (var i = 0; i < OutLocs.length; i++) {
+            var OutOption = $("<button>")
+            OutOption.addClass("location")
+            OutOption.attr("image", OutLocs[i]);
+            OutOption.text(OutLocs[i]);
+            }
+            $('.allQuestions').append(OutOption);
         }else if (userResult == historical){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Machu Picchu, Peru <br> Tikal, Guatemala <br> San Antonio, Texas <br> Stonehenge, UK <br>');
-            $('.allQuestions').append(ShowHistLocs);
+        for (var i = 0; i < HistLocs.length; i++) {
+            var HistOption = $("<button>")
+            HistOption.addClass("location")
+            HistOption.attr("image", HistLocs[i]);
+            HistOption.text(HistLocs[i]);
+        }
+             $('.allQuestions').append(HistOption);
         }else if (userResult == party){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Mykonos, Greece <br> Amsterdam, Netherlands <br> Ibiza, Spain <br> New Orleans, Louisiana <br>');
-            $('.allQuestions').append(ShowParLocs);
+        for (var i = 0; i < ParLocs.length; i++) {
+            var ParOption = $("<button>")
+            ParOption.addClass("location")
+            ParOption.attr("image", ParLocs[i]);
+            ParOption.text(ParLocs[i]);
+        }
+            $('.allQuestions').append(ParOption);
         }else if (userResult == relaxing){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Dry Tortugas, Florida <br> Snowmass, Colorado <br> Sebago Lake, Maine <br> Pienza, Italy <br> ');
-            $('.allQuestions').append(ShowRelLocs);
+        for (var i = 0; i < RelLocs.length; i++) {
+            var RelOption = $("<button>")
+            RelOption.addClass("location")
+            RelOption.attr("image", RelLocs[i]);
+            RelOption.text(RelLocs[i]);
+        }
+            $('.allQuestions').append(RelOption);
         }else if (userResult == foodie){
             $('.allQuestions').empty();
             $('.allQuestions').append('These are 4 locations that fit your personality best: <br> Chicago, Illinois <br> Manila, Philippines <br> Tuscany, Italy <br> Catalunya, Spain <br> ');
-            $('.allQuestions').append(ShowFoodLocs);
+        for (var i = 0; i < FoodLocs.length; i++) {
+            var FoodOption = $("<button>")
+            FoodOption.addClass("location")
+            FoodOption.attr("image", FoodLocs[i]);
+            FoodOption.text(FoodLocs[i]);
+        }
+            $('.allQuestions').append(FoodOption);
         }
     }
 
@@ -435,28 +487,32 @@ $(document).on("click", ".choice", function () {
     console.log('Relaxing Score: ', relaxing);
     console.log('Foodie Score: ', foodie);
 
-})
 
 
-
-
-var ShowSecLocs = ["Glacier Bay Alaska", "Tasmania Australia", "Scottish Highlands", "Salar De Uyuni Bolivia"]
-var ShowTourLocs = ["Paris France", "Yellowstone Wyoming", "Rome Italy", "London England"]
-var ShowOutLocs = ["Banf National Park Canada", "Yosemite National Park California", "Milford Track New Zealand", "Ningaloo Reef Australia"]
-var ShowHistLocs = ["Machu Picchu Peru", "Tikal Guatemala", "San Antonio Texas", "Stonehenge UK"]
-var ShowParLocs = ["Mykonos Greece", "Amsterdam Netherlands", "Ibiza Spain", "New Orleans Louisiana"]
-var ShowRelLocs = ["Dry Tortugas Florida", "Snowmass Colorado", "Sebago Lake Maine", "Pienza Italy"]
-var ShowFoodLocs = ["Chicago Illinois", "Manila Philippines", "Tuscany Italy", "Catalunya Spain"]
-
- $('.container').on('click',function(){
-  $.ajax({
-     url: 'https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=paris+france&image_type=photo',
-    method: 'GET'
-     }).then(function(response) {
-         console.log(response)
+    $('.allQuestions').on('click', function(){
+     var Locations = [SecLocs,TourLocs,OutLocs,HistLocs,ParLocs,RelLocs,FoodLocs]
+     var limit = 1
+     var queryUrl = "https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=" + Locations + "&limit=" + limit + "&image_type=photo"
     
- }) 
- })
+    $.ajax({
+     url: queryUrl ,
+      method: 'GET'
+      }).then(function(response) {
+          console.log(response)
+
+        var locationDiv = $("<div class = 'location'>");
+
+        var imageURL = response.showLocs;
+        
+        var image = $("<img>").attr("src", imageURL);
+      })
+});
+});
+
+});
+
+
+
 
 
 // $('.container').on('click',function(){
@@ -465,7 +521,3 @@ var ShowFoodLocs = ["Chicago Illinois", "Manila Philippines", "Tuscany Italy", "
 //        method: 'GET'
 //        }).then(function(response) {
 //        console.log(response)
-       
-//    }) 
-//    })
-});
