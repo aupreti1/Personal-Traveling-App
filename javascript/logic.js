@@ -434,13 +434,11 @@ $(document).on("click", ".choice", function () {
     console.log('Party Score: ', party);
     console.log('Relaxing Score: ', relaxing);
     console.log('Foodie Score: ', foodie);
-    
-    
-    
+
 })
 
 
-});
+
 
 var ShowSecLocs = ["Glacier Bay Alaska", "Tasmania Australia", "Scottish Highlands", "Salar De Uyuni Bolivia"]
 var ShowTourLocs = ["Paris France", "Yellowstone Wyoming", "Rome Italy", "London England"]
@@ -449,3 +447,25 @@ var ShowHistLocs = ["Machu Picchu Peru", "Tikal Guatemala", "San Antonio Texas",
 var ShowParLocs = ["Mykonos Greece", "Amsterdam Netherlands", "Ibiza Spain", "New Orleans Louisiana"]
 var ShowRelLocs = ["Dry Tortugas Florida", "Snowmass Colorado", "Sebago Lake Maine", "Pienza Italy"]
 var ShowFoodLocs = ["Chicago Illinois", "Manila Philippines", "Tuscany Italy", "Catalunya Spain"]
+
+ $('.container').on('click',function(){
+  $.ajax({
+     url: 'https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=paris+france&image_type=photo',
+    method: 'GET'
+     }).then(function(response) {
+         console.log(response)
+    
+ }) 
+ })
+
+
+// $('.container').on('click',function(){
+//     $.ajax({
+//        url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=Tourism+locations+in+Paris+France&key=AIzaSyBNzLESFftgYkQdNrG2bYD_TgdTfEH1MEU',
+//        method: 'GET'
+//        }).then(function(response) {
+//        console.log(response)
+       
+//    }) 
+//    })
+});
