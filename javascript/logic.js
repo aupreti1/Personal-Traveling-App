@@ -1,11 +1,9 @@
 $(document).ready(function () {
 
-    var totalScore = 0;
-
     var secluded = {
         count: 0,
         result: 0,
-        name: 'secluded'
+        name: 'seclude'
     };
     var touristic = {
         count: 0,
@@ -51,7 +49,7 @@ $(document).ready(function () {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    const dbRefUser = database.ref('newUser');
+    const dbRefUser = database.ref('NewUser');
 
 
     $('#info-button').on('click', function () {
@@ -61,7 +59,7 @@ $(document).ready(function () {
         var lastName = $('#last_name').val().trim();
         var email = $('#email').val().trim();
 
-        dbRefUser.push({
+        var newUser = dbRefUser.push({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
