@@ -101,8 +101,8 @@ $(document).ready(function() {
     }, {
         question: "What movie would you prefer to watch?",
         img: ["./assets/images/matilda.jpg",
-            "./assets/images/code.jpg",
-            "./assets/images/oz.jpg",
+            "./assets/images/guard.jpg",
+            "./assets/images/jones.jpg",
             "./assets/images/pride.jpg",
             "./assets/images/hangover.jpg",
             "./assets/images/moana.jpg",
