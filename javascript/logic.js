@@ -82,7 +82,7 @@ $(document).ready(function () {
 
 
     var Questions = [{
-        question: "How would you prefer to spend a free afternoon?",
+        question: "How would you prefer to spend a free day?",
         text: [
             "Alone in your bed with a good book/movie",
             "Going out to try a new restaurant",
@@ -158,7 +158,7 @@ $(document).ready(function () {
         text: ["Spending time on your own",
             "Seeing new places", "Hiking",
             "Reading about different times and places",
-            "Hitting up alocal club or pub",
+            "Hitting up a local club or pub",
             "Laying on a beach or in a hammock",
             "Discovering new places to eat"]
     
@@ -568,7 +568,7 @@ function searchGooglePlaces(value) {
         var results = response.results;
         var textContainer = $('<div class="text-container col s6">');
 
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             var name = results[i].name;
 
             var pTag = $('<p>');
