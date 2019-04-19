@@ -6,7 +6,7 @@ $(document).ready(function () {
     var secluded = {
         count: 0,
         result: 0,
-        name: 'seclude'
+        name: 'secluded'
     };
     var touristic = {
         count: 0,
