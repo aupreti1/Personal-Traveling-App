@@ -65,7 +65,7 @@ $(document).ready(function () {
         var lastName = $('#last_name').val().trim();
         var email = $('#email').val().trim();
 
-        dbRefUser.push({
+        dbRefUser.set({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
@@ -259,7 +259,7 @@ $(document).ready(function () {
 
             if (userResult.name == "secluded") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 Locations that fit your personality best:');
+                $('.allQuestions').append('These are 4 Locations that fit your personality best:<br>');
 
                 for (var i = 0; i < SecLocs.length; i++) {
                     var SecOptions = $("<button>")
@@ -271,7 +271,7 @@ $(document).ready(function () {
 
             } else if (userResult.name == "touristic") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: ');
+                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
                 for (var i = 0; i < TourLocs.length; i++) {
                     var TourOption = $("<button>")
                     TourOption.addClass("location")
@@ -281,7 +281,7 @@ $(document).ready(function () {
                 }
             } else if (userResult.name == "outdoors") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: ');
+                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
                 for (var i = 0; i < OutLocs.length; i++) {
                     var OutOption = $("<button>")
                     OutOption.addClass("location")
@@ -291,7 +291,7 @@ $(document).ready(function () {
                 }
             } else if (userResult.name == "historical") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: ');
+                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
                 for (var i = 0; i < HistLocs.length; i++) {
                     var HistOption = $("<button>")
                     HistOption.addClass("location")
@@ -301,7 +301,7 @@ $(document).ready(function () {
                 }
             } else if (userResult.name == "party") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: ');
+                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
                 for (var i = 0; i < ParLocs.length; i++) {
                     var ParOption = $("<button>")
                     ParOption.addClass("location")
@@ -311,7 +311,7 @@ $(document).ready(function () {
                 }
             } else if (userResult.name == "relaxing") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: ');
+                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
                 for (var i = 0; i < RelLocs.length; i++) {
                     var RelOption = $("<button>")
                     RelOption.addClass("location")
@@ -321,7 +321,7 @@ $(document).ready(function () {
                 }
             } else if (userResult.name == "foodie") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: > ');
+                $('.allQuestions').append('These are 4 locations that fit your personality best: <br> ');
                 for (var i = 0; i < FoodLocs.length; i++) {
                     var FoodOption = $("<button>")
                     FoodOption.addClass("location")
@@ -385,6 +385,7 @@ function searchPixaBay(value) {
 }
 
 function searchGooglePlaces(value) {
+    $('.text-container').empty();
     var mapDiv = $("<div id='map'>");
     $('.allQuestions').append(mapDiv);
     var personality = userResult.name;
@@ -404,7 +405,18 @@ function searchGooglePlaces(value) {
         method: 'GET',
         url: corsUrl + queryUrl
     }).then(response => {
-        console.log(response);
+        var results = response.results;
+        var textContainer = $('<div class="text-container">');
+
+        for (var i = 0; i < results.length; i++) {
+            var name = results[i].name;
+
+            var pTag = $('<p>');
+                pTag.text(name);
+            textContainer.append(pTag);
+        }
+
+        $('.allQuestions').append(textContainer);
     })
 }
 
