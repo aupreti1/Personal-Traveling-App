@@ -568,7 +568,7 @@ function searchGooglePlaces(value) {
         var results = response.results;
         var textContainer = $('<div class="text-container col s6">');
 
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 8; i++) {
             var name = results[i].name;
 
             var pTag = $('<p>');

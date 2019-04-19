@@ -157,3 +157,8 @@ img {
 .choice:hover { 
   transform: scale(1.1); 
   }
+
+  p{
+    line-height: 2.0;
+    font-size: 20px;
+  }
