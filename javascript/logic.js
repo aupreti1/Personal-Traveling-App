@@ -419,7 +419,7 @@ $(document).ready(function() {
 
             if (userResult.name == "secluded") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 Locations that fit your personality best:<br>');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
 
                 for (var i = 0; i < SecLocs.length; i++) {
                     var SecOptions = $("<button>")
@@ -432,7 +432,7 @@ $(document).ready(function() {
 
             } else if (userResult.name == "touristic") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
                 for (var i = 0; i < TourLocs.length; i++) {
                     var TourOption = $("<button>")
                     TourOption.addClass("location")
@@ -442,7 +442,7 @@ $(document).ready(function() {
                 }
             } else if (userResult.name == "outdoors") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
                 for (var i = 0; i < OutLocs.length; i++) {
                     var OutOption = $("<button>")
                     OutOption.addClass("location")
@@ -452,7 +452,7 @@ $(document).ready(function() {
                 }
             } else if (userResult.name == "historical") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
                 for (var i = 0; i < HistLocs.length; i++) {
                     var HistOption = $("<button>")
                     HistOption.addClass("location")
@@ -462,7 +462,7 @@ $(document).ready(function() {
                 }
             } else if (userResult.name == "party") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
                 for (var i = 0; i < ParLocs.length; i++) {
                     var ParOption = $("<button>")
                     ParOption.addClass("location")
@@ -472,7 +472,7 @@ $(document).ready(function() {
                 }
             } else if (userResult.name == "relaxing") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: <br>');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
                 for (var i = 0; i < RelLocs.length; i++) {
                     var RelOption = $("<button>")
                     RelOption.addClass("location")
@@ -482,7 +482,7 @@ $(document).ready(function() {
                 }
             } else if (userResult.name == "foodie") {
                 $('.allQuestions').empty();
-                $('.allQuestions').append('These are 4 locations that fit your personality best: <br> ');
+                $('.allQuestions').append('<h4>These are 4 Locations that fit your personality best:');
                 for (var i = 0; i < FoodLocs.length; i++) {
                     var FoodOption = $("<button>")
                     FoodOption.addClass("location")
@@ -507,9 +507,10 @@ $(document).ready(function() {
 
     // Handling every 4 buttons
     $(document).on('click', '.location', function() {
-        $('.image-container').empty();
+        $('.image-container').remove();
         var value = $(this).attr('data-location');
-
+        $('.text-container').remove();
+        
         searchPixaBay(value);
 
     });
@@ -556,7 +557,7 @@ function searchGooglePlaces(value) {
     } else if (personality === 'outdoors') {
         queryUrl += '&query=camping+in+' + value
     } else if (personality === 'historical') {
-        queryUrl += '&query=landmarks+in+' + value
+        queryUrl += '&query=landmarks+and+things+to+do+in+' + value
     } else if (personality === 'party') {
         queryUrl += '&query=bars+in+' + value
     } else if (personality === 'relaxing') {
