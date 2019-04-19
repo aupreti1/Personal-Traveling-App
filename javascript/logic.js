@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 
 
-        var newUser = dbRefUser.push({
+        var newUser = dbRefUser.set ({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
         $('#info-box').hide();
 
-
+        dbRefUser.push({userResult}) 
     });
 
 
@@ -577,7 +577,7 @@ function searchGooglePlaces(value) {
         }
 
         $('.allQuestions').append(textContainer);
-        dbRefUser.push({UserResults: userResult}) 
+        
     })
 }
 
