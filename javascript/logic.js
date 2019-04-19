@@ -3,9 +3,6 @@ var corsUrl = 'https://cors-anywhere.herokuapp.com/';
 var userResult = {};
 $(document).ready(function () {
 
-    var totalScore = 0;
-
-
     var secluded = {
         count: 0,
         result: 0,
@@ -352,7 +349,6 @@ $(document).ready(function () {
         var value = $(this).attr('data-location');
 
         searchPixaBay(value);
-        searchGooglePlaces(value);
 
     });
 
@@ -368,11 +364,11 @@ function searchPixaBay(value) {
     }).then(function (response) {
         console.log(response)
 
-        var locationDiv = $("<div class='image-container location'>");
+        var locationDiv = $("<div class='image-container location col s6'>");
 
         var hits = response.hits;
 
-        for (var i = 0; i < hits.length; i++) {
+        for (var i = 0; i < 4; i++) {
             var image = $("<img>").attr("src", hits[i].previewURL);
             locationDiv.append(image);
         }
@@ -380,6 +376,7 @@ function searchPixaBay(value) {
 
         $('.allQuestions').append(locationDiv);
         // var imageURL = response.showLocs;
+        searchGooglePlaces(value);
 
     })
 }
@@ -397,8 +394,15 @@ function searchGooglePlaces(value) {
         queryUrl += '&query=things+to+do+in+' + value
     } else if (personality === 'outdoors') {
         queryUrl += '&query=camping+in+' + value
+    } else if (personality === 'historical') {
+        queryUrl += '&query=landmarks+in+' + value
+    }else if (personality === 'party') {
+        queryUrl += '&query=bars+in+' + value
+    }else if (personality === 'relaxing') {
+        queryUrl += '&query=resorts+in+' + value
+    }else if (personality === 'foodie') {
+        queryUrl += '&query=trendy+restaurants+in+' + value
     }
-
     console.log(queryUrl);
     
     $.ajax({
@@ -406,9 +410,9 @@ function searchGooglePlaces(value) {
         url: corsUrl + queryUrl
     }).then(response => {
         var results = response.results;
-        var textContainer = $('<div class="text-container">');
+        var textContainer = $('<div class="text-container col s6">');
 
-        for (var i = 0; i < results.length; i++) {
+        for (var i = 0; i < 4; i++) {
             var name = results[i].name;
 
             var pTag = $('<p>');
@@ -417,6 +421,7 @@ function searchGooglePlaces(value) {
         }
 
         $('.allQuestions').append(textContainer);
+
     })
 }
 
