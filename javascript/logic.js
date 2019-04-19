@@ -1,4 +1,10 @@
+var corsUrl = 'https://cors-anywhere.herokuapp.com/';
+
+var userResult = {};
 $(document).ready(function () {
+
+    var totalScore = 0;
+
 
     var secluded = {
         count: 0,
@@ -234,13 +240,13 @@ $(document).ready(function () {
             ];
 
 
-            var userResult = userSelection.reduce(function (prev, current) {
+            userResult = userSelection.reduce(function (prev, current) {
                 if (prev.count > current.count) {
                     return prev;
                 }
                 return current;
 
-            })
+            });
             console.log('User Result: ', userResult);
             var SecLocs = ["Glacier Bay Alaska", "Tasmania Australia", "Scottish Highlands", "Salar De Uyuni Bolivia"]
             var TourLocs = ["Paris France", "Yellowstone Wyoming", "Rome Italy", "London England"]
@@ -334,50 +340,88 @@ $(document).ready(function () {
         console.log('Relaxing Score: ', relaxing);
         console.log('Foodie Score: ', foodie);
 
-        
+
 
         // $('.allQuestions').on('click', function () {
         // });
     });
 
     // Handling every 4 buttons
-    $(document).on('click', '.location', function() {
+    $(document).on('click', '.location', function () {
         $('.image-container').empty();
         var value = $(this).attr('data-location');
-        // var Locations = [SecLocs, TourLocs, OutLocs, HistLocs, ParLocs, RelLocs, FoodLocs]
-        var limit = 1
-        var queryUrl = "https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=" + value + "&image_type=photo"
 
-        $.ajax({
-            url: queryUrl,
-            method: 'GET'
-        }).then(function (response) {
-            console.log(response)
+        searchPixaBay(value);
+        searchGooglePlaces(value);
 
-            var locationDiv = $("<div class='image-container location'>");
-
-            var hits = response.hits;
-
-            for (var i= 0; i < hits.length; i++) {
-                var image = $("<img>").attr("src", hits[i].previewURL);
-                locationDiv.append(image);
-            }
-            
-            $('.allQuestions').append(locationDiv);
-            // var imageURL = response.showLocs;
-
-        })
     });
 
 });
 
 
+function searchPixaBay(value) {
+    var queryUrl = "https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=" + value + "&image_type=photo"
+
+    $.ajax({
+        url: queryUrl,
+        method: 'GET'
+    }).then(function (response) {
+        console.log(response)
+
+        var locationDiv = $("<div class='image-container location'>");
+
+        var hits = response.hits;
+
+        for (var i = 0; i < hits.length; i++) {
+            var image = $("<img>").attr("src", hits[i].previewURL);
+            locationDiv.append(image);
+        }
+        var searchButton = $('<input placeholder=""/>');
+
+        $('.allQuestions').append(locationDiv);
+        // var imageURL = response.showLocs;
+
+    })
+}
+
+function searchGooglePlaces(value) {
+    var mapDiv = $("<div id='map'>");
+    $('.allQuestions').append(mapDiv);
+    var personality = userResult.name;
+    var queryUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBNzLESFftgYkQdNrG2bYD_TgdTfEH1MEU';
+
+    if (personality === 'touristic') {
+        queryUrl += '&query=Tourism+locations+in+' + value
+    } else if (personality === 'secluded') {
+        queryUrl += '&query=things+to+do+in+' + value
+    } else if (personality === 'outdoors') {
+        queryUrl += '&query=camping+in+' + value
+    }
+
+    console.log(queryUrl);
+    
+    $.ajax({
+        method: 'GET',
+        url: corsUrl + queryUrl
+    }).then(response => {
+        console.log(response);
+    })
+}
 
 
 
-// $('.container').on('click',function(){
-//     $.ajax({
+
+//  $('.container').on('click',function(){
+//    $.ajax({
 //        url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=Tourism+locations+in+Paris+France&key=AIzaSyBNzLESFftgYkQdNrG2bYD_TgdTfEH1MEU',
 //        method: 'GET'
-//        }).then(function(response) {
-//        console.log(response)
+//         }).then(function(response) {
+//         console.log(response)
+
+// things+to+do+in+“glacier+bay+alaska” or “tasmania+australia”
+// tourist+locations+in+“Paris+France” or “Yellowstone+Wyoming”
+// things+to+do+in+“banf+national+park+canada” or “Yosemite+national+park+california”
+// historical+locations+in+“machu+picchu+peru” or “tikal+guatemala”
+// bars+and+clubs+in+“mykonos+greece” or “amsterdam+netherlands”
+// resorts+in+“dry+tortugas+florida” or “snowmass+colorado”
+// best+restaurants+in+“chicago+illinois” or “manila+philippines”
