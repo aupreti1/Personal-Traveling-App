@@ -86,18 +86,18 @@ $(document).ready(function () {
         text: [
             "Alone in your bed with a good book/movie",
             "Going out to try a new restaurant",
-            "Laying out under the stars enjoying the night",
+            "Outside playing sports",
             "Re-watching your favorite historical movie or show",
-            "Going out ot your favorite club or bar",
+            "Going out to your favorite club or bar",
             "Hanging out with a few friends at home",
             "In the kitchen creating new concoctions of snacks"]
 
     }, {
         question: "What would you rather read?",
         img: [
-            "./assets/images/ripper.jpg",
-            "./assets/images/travelingpants.jpg",
-            "./assets/images/intothewild.jpg",
+            "./assets/images/edgar.jpg",
+            "./assets/images/eragon.jpg",
+            "./assets/images/hatchet.jpg",
             "./assets/images/boleyn.jpg",
             "./assets/images/cosmo.jpg",
             "./assets/images/harrypotter.jpg",
@@ -105,23 +105,23 @@ $(document).ready(function () {
 
     }, {
         question: "What movie would you prefer to watch?",
-        img: ["./assets/images/wallflower.jpg",
-            "./assets/images/midnight.jpg",
-            "./assets/images/grizzlyman.jpg",
+        img: ["./assets/images/matilda.jpg",
+            "./assets/images/code.jpg",
+            "./assets/images/oz.jpg",
             "./assets/images/pride.jpg",
             "./assets/images/hangover.jpg",
-            "./assets/images/howtolose.jpg",
-            "./assets/images/julieandjulia.jpg"]
+            "./assets/images/moana.jpg",
+            "./assets/images/rat.jpg"]
 
     }, {
         question: "What show would you prefer to watch?",
-        img: ["./assets/images/penny.jpg",
+        img: ["./assets/images/arrow.jpg",
             "./assets/images/darktourist.jpg",
             "./assets/images/blueplanet.jpg",
             "./assets/images/reign.jpg",
-            "./assets/images/jerseyshore.jpg",
+            "./assets/images/atlanta.jpg",
             "./assets/images/parksandrec.jpg",
-            "./assets/images/cupcake.jpg"]
+            "./assets/images/hells.jpg"]
     
     }, {
         question: "What would be your dream career?",
