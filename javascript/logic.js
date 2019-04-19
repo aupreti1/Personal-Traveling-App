@@ -416,7 +416,7 @@ $(document).ready(function () {
 
                 for (var i = 0; i < SecLocs.length; i++) {
                     var SecOptions = $("<button>")
-                    SecOptions.addClass("locations");
+                    SecOptions.addClass("location");
                     SecOptions.attr("data-location", SecLocs[i]);
                     SecOptions.text(SecLocs[i]);
                     $('.allQuestions').append(SecOptions);
