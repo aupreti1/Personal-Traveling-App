@@ -10,6 +10,11 @@ ul {
   margin-top: 20px;
 }
 
+h1 {
+  margin:10px;
+  font-size: 52px;
+}
+
 h2 {
   padding-top:25px;
 }
@@ -156,4 +161,9 @@ img {
 
 .choice:hover { 
   transform: scale(1.1); 
+  }
+
+  p{
+    line-height: 2.0;
+    font-size: 20px;
   }
