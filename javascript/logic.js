@@ -401,12 +401,12 @@ $(document).ready(function () {
 
             });
             console.log('User Result: ', userResult);
-            var SecLocs = ["Glacier Bay Alaska", "Tasmania Australia", "Scottish Highlands", "Salar De Uyuni Bolivia"]
+            var SecLocs = ["Bali Indonesia", "Isle of Skye UK", "Easter Island Chile", "Cape Elizabeth Maine"]
             var TourLocs = ["Paris France", "Yellowstone Wyoming", "Rome Italy", "London England"]
-            var OutLocs = ["Banf National Park Canada", "Yosemite National Park California", "Milford Track New Zealand", "Ningaloo Reef Australia"]
-            var HistLocs = ["Machu Picchu Peru", "Tikal Guatemala", "San Antonio Texas", "Stonehenge UK"]
+            var OutLocs = ["Wales UK", "Yosemite National Park California", "Alberta Canada", "Queensland Australia"]
+            var HistLocs = ["Machu Picchu Peru", "Schwangau Germany", "San Antonio Texas", "Salisbury England"]
             var ParLocs = ["Mykonos Greece", "Amsterdam Netherlands", "Ibiza Spain", "New Orleans Louisiana"]
-            var RelLocs = ["Dry Tortugas Florida", "Snowmass Colorado", "Sebago Lake Maine", "Pienza Italy"]
+            var RelLocs = ["North Male Atoll Maldives", "Maui Hawaii", "Bora Bora French Polynesia", "Pienza Italy"]
             var FoodLocs = ["Chicago Illinois", "Manila Philippines", "Tuscany Italy", "Catalunya Spain"]
 
 
@@ -416,7 +416,7 @@ $(document).ready(function () {
 
                 for (var i = 0; i < SecLocs.length; i++) {
                     var SecOptions = $("<button>")
-                    SecOptions.addClass("locations");
+                    SecOptions.addClass("location");
                     SecOptions.attr("data-location", SecLocs[i]);
                     SecOptions.text(SecLocs[i]);
                     $('.allQuestions').append(SecOptions);
