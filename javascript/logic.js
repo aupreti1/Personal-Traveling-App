@@ -61,15 +61,18 @@ $(document).ready(function () {
         var firstName = $('#first_name').val().trim();
         var lastName = $('#last_name').val().trim();
         var email = $('#email').val().trim();
+        
 
 
 
-        var newUser = dbRefUser.set({
+        var newUser = dbRefUser.push({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
+            
         })
 
+        
 
         $('#info-box').hide();
 
@@ -423,7 +426,7 @@ function searchGooglePlaces(value) {
         }
 
         $('.allQuestions').append(textContainer);
-
+        dbRefUser.push({UserResults: userResult}) 
     })
 }
 
