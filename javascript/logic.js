@@ -60,7 +60,7 @@ $(document).ready(function() {
         var lastName = $('#last_name').val().trim();
         var email = $('#email').val().trim();
 
-        var newUser = dbRefUser.set({
+        var newUser = dbRefUser.push({
             FirstName: firstName,
             LastName: lastName,
             Email: email,
