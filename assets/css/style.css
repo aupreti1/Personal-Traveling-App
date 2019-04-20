@@ -2,6 +2,9 @@ body {
   font-family: 'Karla', sans-serif;
   color: white;
   text-align: center;
+  margin:0;
+  padding:0;
+  height:100%;
 }
 p{
   font-family: 'Karla', sans-serif;
@@ -15,7 +18,10 @@ h4{
 .allQuestions{
   margin-top:10px;
 }
-
+#body{
+  padding:10px;
+  padding-bottom: 60px;
+}
 ul {
   margin-top: 20px;
 }
@@ -59,12 +65,12 @@ button:focus {
   color: rgb(36, 66, 186);
 }
 
-header {
+#header {
   padding: 20px;
   background-color: rgb(36, 66, 186);
 }
 
-footer {
+#footer {
   padding: 20px;
   background-color: rgb(36, 66, 186);
   position: absolute;
@@ -183,3 +189,7 @@ img {
 .choice:hover { 
   transform: scale(1.1); 
   }
+#container {
+  min-height:100%;
+  position:relative;
+}
