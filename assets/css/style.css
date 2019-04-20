@@ -3,9 +3,19 @@ body {
   color: white;
   text-align: center;
 }
-#text-container{
-  line-height:2.0;
+p{
+  font-family: 'Karla', sans-serif;
+  color: white;
+  line-height: 1.0;
+  font-size: 20px;
 }
+h4{
+ padding-top:20px;
+}
+.allQuestions{
+  margin-top:10px;
+}
+
 ul {
   margin-top: 20px;
 }
@@ -35,7 +45,16 @@ h2 {
 #form-box {
   margin-top: 50px;
 }
-
+button{
+  font-family: 'Karla', sans-serif;
+  margin: 5px;
+  padding: 10px;
+  color: rgb(36, 66, 186);
+  font-weight: bold;
+}
+button:focus {
+  background-color: goldenrod;
+}
 #info-button {
   background-color: white;
   color: rgb(36, 66, 186);
@@ -56,8 +75,11 @@ footer {
 #card {
   margin-top: 50px;
   background-color: rgba(36, 66, 186, 0.94);
+  height: 500px;
 }
-
+.row .col.s6{
+  margin-top:5px;
+}
 .input-field [type=text] {
   color: white;
 }
@@ -147,8 +169,8 @@ h2 {
 }
 
 img {
-  padding-bottom: 20px;
-  padding-left: 15px;
+  padding-top: 20px;
+  padding-left: 35px;
   float: left;
   height: 160px;
   width: 160px;
@@ -160,9 +182,4 @@ img {
 
 .choice:hover { 
   transform: scale(1.1); 
-  }
-
-  p{
-    line-height: 2.0;
-    font-size: 20px;
   }
