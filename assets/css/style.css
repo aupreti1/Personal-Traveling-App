@@ -2,9 +2,6 @@ body {
   font-family: 'Karla', sans-serif;
   color: white;
   text-align: center;
-  margin:0;
-  padding:0;
-  height:100%;
 }
 p{
   font-family: 'Karla', sans-serif;
@@ -18,10 +15,7 @@ h4{
 .allQuestions{
   margin-top:10px;
 }
-#body{
-  padding:10px;
-  padding-bottom: 60px;
-}
+
 ul {
   margin-top: 20px;
 }
@@ -36,8 +30,8 @@ h2 {
 }
 
 #info {
-  width: 80%;
-  margin-left: 80px;
+  width: 50%;
+  margin-left: 230px;
   left: auto;
   right: auto;
   padding-top: 30px;
@@ -46,6 +40,7 @@ h2 {
 #question {
   padding-top: 20px;
 }
+
 
 #form-box {
   margin-top: 50px;
@@ -65,17 +60,17 @@ button:focus {
   color: rgb(36, 66, 186);
 }
 
-#header {
+header {
   padding: 20px;
   background-color: rgb(36, 66, 186);
 }
 
-#footer {
+footer {
   padding: 20px;
   background-color: rgb(36, 66, 186);
   position: absolute;
-  width: 100%;
   bottom: 0;
+  width: 100%;
 }
 
 #card {
@@ -83,7 +78,7 @@ button:focus {
   background-color: rgba(36, 66, 186, 0.94);
   height: 500px;
 }
-.row.col.s6{
+.row .col.s6{
   margin-top:5px;
 }
 .input-field [type=text] {
@@ -189,7 +184,8 @@ img {
 .choice:hover { 
   transform: scale(1.1); 
   }
-#container {
-  min-height:100%;
-  position:relative;
-}
+
+  .page-footer{
+    background-color: rgb(36, 66, 186);
+    padding: 15px;
+  }
