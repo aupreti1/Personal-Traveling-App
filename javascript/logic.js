@@ -40,7 +40,7 @@ $(document).ready(function() {
     };
 
     var config = {
-        apiKey: "AIzaSyCEEkKqWFKy24DDMpplraZp_XDdRW6kwZI",
+        apiKey: "",
         authDomain: "personality-vacation-quiz.firebaseapp.com",
         databaseURL: "https://personality-vacation-quiz.firebaseio.com",
         projectId: "personality-vacation-quiz",
@@ -518,7 +518,7 @@ $(document).ready(function() {
 });
 
 function searchPixaBay(value) {
-    var queryUrl = "https://pixabay.com/api/?key=12232315-9da9dc9c6bbb0051e3d59b85b&q=" + value + "&image_type=photo"
+    var queryUrl = "https://pixabay.com/api/?key=&q=" + value + "&image_type=photo"
 
     $.ajax({
         url: queryUrl,
@@ -548,7 +548,7 @@ function searchGooglePlaces(value) {
     var mapDiv = $("<div id='map'>");
     $('.allQuestions').append(mapDiv);
     var personality = userResult.name;
-    var queryUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBNzLESFftgYkQdNrG2bYD_TgdTfEH1MEU';
+    var queryUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json?key=';
 
     if (personality === 'touristic') {
         queryUrl += '&query=Tourism+locations+in+' + value
