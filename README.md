@@ -1,13 +1,14 @@
-live link: https://aupreti1.github.io/Personal-Traveling-App/
+<h1>live link: https://aupreti1.github.io/Personal-Traveling-App/</h1>
 
-Project Title:  Personal Travel App
+<h1>Project Title:  Personal Travel App</h1>
 
-Team Members:  Margarita Munoz, Gabriella Tannous, Anastasia Upreti
+<h2>Team Members:  Margarita Munoz, Gabriella Tannous, Anastasia Upreti</h2>
 
-Project Description: This app provides a personality quiz that then feeds for places to travel to based on your answers. From there you can search the locations to find out travel arrangements.
+<p>Project Description: Personal Travel App is a personality based quiz that assesses the user's preferences to suggest travel destinations based on their results. Once the user takes the quiz, they will be presented with 4 different locations that would interest them. Each location will have several sites to visit so that a user knows what places to visit while there.</p>
 
-APIs to be used:  Tumbler API and Places API
+<li>APIs used:  Pixabay API and Google Places API</li>
 
-Rough Breakdown of Tasks:  Margarita will be responsible for the integration and response of the Tumbler API. Ana will be responsible for the integration and response of the Rapid API. Gigi will be reponsible of UX/UI integration.
 
-Sketch of the project layout:
+
+
+
